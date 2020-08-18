@@ -18,7 +18,7 @@ languageCode = "ja-JP"
 googleAnalytics = ""
 
 # Enable / Disable comments on the articles via Disqus.
-disqusShortname = ""
+disqusShortname = "ebisenttt"
 
 # Enable / Disable open link with a new tab.
 [blackfriday]
@@ -52,7 +52,7 @@ disqusShortname = ""
     algolia_currentLanguageOnly = true
 
   # Enable / Disable comments on the articles via commento
-  commentoJsURL = "https://commento.lednerb.de/js/commento.js"
+  commentoJsURL = ""
 
   # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
