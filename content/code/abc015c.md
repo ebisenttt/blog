@@ -2,6 +2,8 @@
 title: "ABC015-C"
 date: 2020-08-19T07:27:47+09:00
 draft: false
+categories: ["AtCoder"]
+tags : ["abc", "oxr"] 
 ---
 AtCoder茶色を目指し，練習のためABCのC問題を全問AC，解説ACすることがとりあえずの目標。
 今回はABC015のC問題を解いてみた。

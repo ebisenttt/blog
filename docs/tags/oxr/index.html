@@ -14,17 +14,17 @@
     <title>
         
            
-               Author &vert; ebisen blog
+               oxr &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="Author - プログラミング初学者の備忘録">
-    <meta itemprop="name" content="Author">
-    <meta itemprop="description" content="Author - プログラミング初学者の備忘録">
-    <meta property="og:title" content="Author">
-    <meta property="og:description" content="Author - プログラミング初学者の備忘録">
+    <meta name="description" content="oxr - プログラミング初学者の備忘録">
+    <meta itemprop="name" content="oxr">
+    <meta itemprop="description" content="oxr - プログラミング初学者の備忘録">
+    <meta property="og:title" content="oxr">
+    <meta property="og:description" content="oxr - プログラミング初学者の備忘録">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/author/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/tags/oxr/">
     <meta property="og:site_name" content="ebisen blog"><meta property="og:type" content="website">
 
     
@@ -33,8 +33,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/author/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/author/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/tags/oxr/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/tags/oxr/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -114,24 +114,100 @@
 
     <div class="main container">
         
+    
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="https://ebisenttt.github.io/blog/code/abc015c/">
+    <i class="fas fa-fw fa-code"></i>
+</a>
 
-<div class="content">
-    <div class="article-wrapper u-cf single">
-        <a class="bubble" href="/blog/author/">
-            <i class="fa fa-fw fa-users"></i>
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://ebisenttt.github.io/blog/code/abc015c/">
+            ABC015-C
         </a>
+    </h1>
 
-        <article class="article">
-            <div class="content">
-                <h3>Authors</h3>
-                <hr>
-                <ul id="all-categories">
+    <div class="meta">
+        
+            
+                <span class="date moment">2020-08-19</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
                     
-                </ul>
-            </div>
-        </article>
+                    
+                        <a href="https://ebisenttt.github.io/blog/categories/atcoder/">AtCoder</a>
+                    
+                
+            </span>
+        
+
+        
     </div>
+
+    
+        AtCoder茶色を目指し，練習のためABCのC問題を全問AC，解説ACすることがとりあえずの目標。 今回はABC015のC問題を解いてみた。
+問題 AtCoder ABC015 C
+感想 まず排他的論理和（XOR）をまともに勉強していなかったのでそこから。 さらに可変長配列の要素の組み合わせをどう作るかに手こずった。 最終的にqueueにvectorをpush, popすることを繰り返す形にした。 queueの使い方にまだ慣れていないが自力で書けたことが少し嬉しい。 コメントアウトしているところは一度WAが出てしまい，n, kを最大値にしてみたため。 結局原因はそこではなく，配列の添字を間違えていただけだった。
+解答 提出#16031331
+#include &lt;iostream&gt; #include &lt;vector&gt; #include &lt;cmath&gt; #include &lt;algorithm&gt; #include &lt;numeric&gt; #include &lt;iomanip&gt; #include &lt;queue&gt; using namespace std; #define REP(i, n) for(int i = 0; i &lt; n; i++) #define FOR(i, m, n) for(int i = m; i &lt; n; i++) #define ALL(x) (x).begin(),(x).end() //sortなどの引数を省略したい #define SIZE(x) ((ll)(x).size()) //sizeをsize_tからllに直しておく #define MAX(x) *max_element(ALL(x)) //最大値を求める #define MIN(x) *min_element(ALL(x)) //最小値を求める typedef long long ll; typedef long double ld; int main(){ ll n,k; cin&gt;&gt;n&gt;&gt;k; //ll n=5,k=5; vector&lt;vector&lt;ll&gt;&gt; v(n,vector&lt;ll&gt; (k)); REP(i,n)REP(j,k)cin&gt;&gt;v[i][j]; //REP(i,n)REP(j,k)v[i][j]=127; vector&lt;vector&lt;ll&gt;&gt; w; queue&lt;vector&lt;ll&gt;&gt; q; q.
+
+        
+            <a href="https://ebisenttt.github.io/blog/code/abc015c/" class="more">Continue reading</a>
+        
+    
 </div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/abc/">abc</a>
+                    
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/oxr/">oxr</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+            
+        </div>
+    
+
+    
+    <div class="paginator">
+        
+
+        
+    </div>
+
+
 
     </div>
 
@@ -197,7 +273,7 @@
                 by ebisen
             </a>
             -
-            <a href="https://ebisenttt.github.io/blog/author/index.xml">RSS</a>
+            <a href="https://ebisenttt.github.io/blog/tags/oxr/index.xml">RSS</a>
         </div>
         <div class="author">
             <a href="https://github.com/Lednerb/bilberry-hugo-theme"

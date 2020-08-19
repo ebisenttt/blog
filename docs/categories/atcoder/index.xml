@@ -1,13 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ebisen blog</title>
-    <link>https://ebisenttt.github.io/blog/</link>
-    <description>Recent content on ebisen blog</description>
+    <title>AtCoder on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/categories/atcoder/</link>
+    <description>Recent content in AtCoder on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <lastBuildDate>Wed, 19 Aug 2020 07:27:47 +0900</lastBuildDate>
     
-        <atom:link href="https://ebisenttt.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ebisenttt.github.io/blog/categories/atcoder/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
