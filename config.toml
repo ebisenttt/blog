@@ -10,9 +10,13 @@ enableRobotsTXT = true
 
 # Change to one of your content languages definded at the end.
 #ビルド時のデフォルト言語
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "ja"
 #公開するページの言語指定
 languageCode = "ja-JP"
+#中国語，日本語，韓国語（単語間のスペースがない言語）か
+hasCJKLanguage = true
+#概要の長さ
+summaryLength = 120
 
 # Enable / Disable Google Analytics statistics for your site
 googleAnalytics = ""
@@ -34,7 +38,7 @@ disqusShortname = "ebisenttt"
 
   # Description and meta data for the search engines
   author = "ebisenttt"
-  description = "プログラミング初学者の備忘録"
+  description = "ebiesn blog"
   keywords = "ブログ,プログラミング,数学,blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
 
   # How many articles should be displayed at once?

@@ -16,11 +16,7 @@
       <pubDate>Wed, 19 Aug 2020 07:27:47 +0900</pubDate>
       
       <guid>https://ebisenttt.github.io/blog/code/abc015c/</guid>
-      <description>AtCoder茶色を目指し，練習のためABCのC問題を全問AC，解説ACすることがとりあえずの目標。 今回はABC015のC問題を解いてみた。
-問題 AtCoder ABC015 C
-感想 まず排他的論理和（XOR）をまともに勉強していなかったのでそこから。 さらに可変長配列の要素の組み合わせをどう作るかに手こずった。 最終的にqueueにvectorをpush, popすることを繰り返す形にした。 queueの使い方にまだ慣れていないが自力で書けたことが少し嬉しい。 コメントアウトしているところは一度WAが出てしまい，n, kを最大値にしてみたため。 結局原因はそこではなく，配列の添字を間違えていただけだった。
-解答 提出#16031331
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;cmath&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;numeric&amp;gt; #include &amp;lt;iomanip&amp;gt; #include &amp;lt;queue&amp;gt; using namespace std; #define REP(i, n) for(int i = 0; i &amp;lt; n; i++) #define FOR(i, m, n) for(int i = m; i &amp;lt; n; i++) #define ALL(x) (x).begin(),(x).end() //sortなどの引数を省略したい #define SIZE(x) ((ll)(x).size()) //sizeをsize_tからllに直しておく #define MAX(x) *max_element(ALL(x)) //最大値を求める #define MIN(x) *min_element(ALL(x)) //最小値を求める typedef long long ll; typedef long double ld; int main(){ ll n,k; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;k; //ll n=5,k=5; vector&amp;lt;vector&amp;lt;ll&amp;gt;&amp;gt; v(n,vector&amp;lt;ll&amp;gt; (k)); REP(i,n)REP(j,k)cin&amp;gt;&amp;gt;v[i][j]; //REP(i,n)REP(j,k)v[i][j]=127; vector&amp;lt;vector&amp;lt;ll&amp;gt;&amp;gt; w; queue&amp;lt;vector&amp;lt;ll&amp;gt;&amp;gt; q; q.</description>
+      <description>AtCoder茶色を目指し，練習のためABCのC問題を全問AC，解説ACすることがとりあえずの目標。 今回はABC015のC問題を解いてみた。 問題 AtCoder ABC015 C 感想 まず排他的論理和（XOR）をまともに勉強していなかったのでそこから。 さらに可変長配列の</description>
     </item>
     
   </channel>
