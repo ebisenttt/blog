@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/article/</link>
+    <description>Recent content in Articles on ebisen blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Wed, 26 Aug 2020 18:58:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://ebisenttt.github.io/blog/article/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>学習計画#1</title>
+      <link>https://ebisenttt.github.io/blog/article/studyplan1/</link>
+      <pubDate>Wed, 26 Aug 2020 18:58:25 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/studyplan1/</guid>
+      <description>学習計画(2020年9月版) AtCoder 平日 現レート相当の問題を数問 AtCoderProblemsのRecommendationにて 難易度Medium Don’t exclude solved problems で設定した時に表示される問題を数問解く。 これまでは夏期休暇で時間を取れる日が多かった</description>
+    </item>
+    
+  </channel>
+</rss>

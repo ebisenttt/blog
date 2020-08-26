@@ -5,10 +5,28 @@
     <description>Recent content on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 19 Aug 2020 12:09:33 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 18:58:25 +0900</lastBuildDate>
     
         <atom:link href="https://ebisenttt.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>学習計画#1</title>
+      <link>https://ebisenttt.github.io/blog/article/studyplan1/</link>
+      <pubDate>Wed, 26 Aug 2020 18:58:25 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/studyplan1/</guid>
+      <description>学習計画(2020年9月版) AtCoder 平日 現レート相当の問題を数問 AtCoderProblemsのRecommendationにて 難易度Medium Don’t exclude solved problems で設定した時に表示される問題を数問解く。 これまでは夏期休暇で時間を取れる日が多かった</description>
+    </item>
+    
+    <item>
+      <title>Linklist</title>
+      <link>https://ebisenttt.github.io/blog/code/linklist/</link>
+      <pubDate>Wed, 19 Aug 2020 13:16:13 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/code/linklist/</guid>
+      <description>DFS (深さ優先探索) 超入門！ 〜 グラフ・アルゴリズムの世界への入口 〜【前編】 特に幅優先探索と深さ優先探索の違いについてわかりやすくまとめている。 VISUALGO.NET アルゴリズムをアニメーションで視覚的にわかりやすく捉えることができる。UIも綺麗で素晴らしい。</description>
+    </item>
     
     <item>
       <title>ABC016-C</title>
