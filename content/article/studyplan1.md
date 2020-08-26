@@ -7,8 +7,6 @@ categories: [学習計画]
 tags: ["atcoder"]
 author: ""
 ---
-# 学習計画(2020年9月版)
-
 ## AtCoder
 ### 平日
 #### 現レート相当の問題を数問
