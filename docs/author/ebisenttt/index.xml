@@ -20,14 +20,5 @@
       <description>DFS (深さ優先探索) 超入門！ 〜 グラフ・アルゴリズムの世界への入口 〜【前編】 特に幅優先探索と深さ優先探索の違いについてわかりやすくまとめている。 VISUALGO.NET アルゴリズムをアニメーションで視覚的にわかりやすく捉えることができる。UIも綺麗で素晴らしい。</description>
     </item>
     
-    <item>
-      <title>ABC016-C</title>
-      <link>https://ebisenttt.github.io/blog/code/abc016c/</link>
-      <pubDate>Wed, 19 Aug 2020 12:09:33 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/code/abc016c/</guid>
-      <description>問題 AtCoder ABC016 C 感想 とりあえずグラフを作ればいいことは分かったが，どう実装していいのか悩んだ。 考えた結果，以前「ワーシャルフロイド法」を使ったことを思い出した。 各頂点について，距離が2である別の頂点がいくつかあるか確かめれば良い。 公式解説も同じ趣</description>
-    </item>
-    
   </channel>
 </rss>

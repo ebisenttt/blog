@@ -5,10 +5,28 @@
     <description>Recent content on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 26 Aug 2020 18:58:25 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 21:33:54 +0900</lastBuildDate>
     
         <atom:link href="https://ebisenttt.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>200825の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200825/</link>
+      <pubDate>Thu, 27 Aug 2020 21:33:54 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200825/</guid>
+      <description>Ringo&amp;rsquo;s Favorite Numbers N=100のときの例外処理をしなければいけない事にしばらく気付けず。dとNの値をループさせて全ての計算結果を表示させたことで気づいた。ストレステストを素早くできるような環境構築が必要？ Multiplication 2 未だACせず。桁数が大きくなってしまうのでそこ</description>
+    </item>
+    
+    <item>
+      <title>200826の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200826/</link>
+      <pubDate>Thu, 27 Aug 2020 21:32:08 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200826/</guid>
+      <description>直方体 Dividing String 問題文の意図は汲み取れたが，どうもそのように読み取れない。Twitterでフォロワーの方にも補足頂いた。しかし「存在する」の部分に違和感がある。未だACせず。 Indeedなう！ Indeedのコンテストもあるんですね。アナグラムには</description>
+    </item>
     
     <item>
       <title>学習計画#1</title>

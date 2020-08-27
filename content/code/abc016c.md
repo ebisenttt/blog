@@ -5,7 +5,7 @@ draft: false
 
 categories: ["Programming"]
 tags: ["atcoder"]
-author: "ebisenttt"
+author: ""
 ---
 ### 問題
 [AtCoder ABC016 C](https://atcoder.jp/contests/abc016/tasks/abc016_3)
