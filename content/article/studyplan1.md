@@ -11,7 +11,7 @@ author: ""
 ### 平日
 #### 現レート相当の問題を数問
 AtCoderProblemsのRecommendationにて
-- 難易度Medium
+- 難易度Moderate
 - Don’t exclude solved problems 
 
 で設定した時に表示される問題を数問解く。
