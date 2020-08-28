@@ -1,12 +1,14 @@
 ---
-title: "Linklist"
+title: "Link List"
 date: 2020-08-19T13:16:13+09:00
 draft: false
 
-categories: ["Programming"]
+categories: [""]
 tags: []
-author: "ebisenttt"
+author: ""
 ---
+このサイトの制作や競技プログラミングの過去問演習に参考にしたサイトを載せておきます。
+
 [DFS (深さ優先探索) 超入門！ 〜 グラフ・アルゴリズムの世界への入口 〜【前編】](https://qiita.com/drken/items/4a7869c5e304883f539b)
 
 特に幅優先探索と深さ優先探索の違いについてわかりやすくまとめている。

@@ -20,14 +20,5 @@
       <description>AtCoder 平日 現レート相当の問題を数問 AtCoderProblemsのRecommendationにて 難易度Moderate Don’t exclude solved problems で設定した時に表示される問題を数問解く。 これまでは夏期休暇で時間を取れる日が多かったが，今後毎日ABCのC問</description>
     </item>
     
-    <item>
-      <title>ABC016-C</title>
-      <link>https://ebisenttt.github.io/blog/code/abc016c/</link>
-      <pubDate>Wed, 19 Aug 2020 12:09:33 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/code/abc016c/</guid>
-      <description>問題 AtCoder ABC016 C 感想 とりあえずグラフを作ればいいことは分かったが，どう実装していいのか悩んだ。 考えた結果，以前「ワーシャルフロイド法」を使ったことを思い出した。 各頂点について，距離が2である別の頂点がいくつかあるか確かめれば良い。 公式解説も同じ趣</description>
-    </item>
-    
   </channel>
 </rss>

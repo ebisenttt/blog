@@ -3,8 +3,8 @@ title: "ABC016-C"
 date: 2020-08-19T12:09:33+09:00
 draft: false
 
-categories: ["Programming"]
-tags: ["atcoder"]
+categories: ["AtCoder"]
+tags: ["abc"]
 author: ""
 ---
 ### 問題

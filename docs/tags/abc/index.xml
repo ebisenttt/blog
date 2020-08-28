@@ -6,10 +6,19 @@
     <description>Recent content in abc on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 19 Aug 2020 07:27:47 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 12:09:33 +0900</lastBuildDate>
     
 	<atom:link href="https://ebisenttt.github.io/blog/tags/abc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ABC016-C</title>
+      <link>https://ebisenttt.github.io/blog/code/abc016c/</link>
+      <pubDate>Wed, 19 Aug 2020 12:09:33 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/code/abc016c/</guid>
+      <description>問題 AtCoder ABC016 C 感想 とりあえずグラフを作ればいいことは分かったが，どう実装していいのか悩んだ。 考えた結果，以前「ワーシャルフロイド法」を使ったことを思い出した。 各頂点について，距離が2である別の頂点がいくつかあるか確かめれば良い。 公式解説も同じ趣</description>
+    </item>
     
     <item>
       <title>ABC015-C</title>
