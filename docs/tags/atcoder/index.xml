@@ -6,10 +6,19 @@
     <description>Recent content in atcoder on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 26 Aug 2020 18:58:25 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 11:11:25 +0900</lastBuildDate>
     
 	<atom:link href="https://ebisenttt.github.io/blog/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編</title>
+      <link>https://ebisenttt.github.io/blog/article/arihonchecklist/</link>
+      <pubDate>Sun, 30 Aug 2020 11:11:25 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/arihonchecklist/</guid>
+      <description>定期的にAtCoderのABCに参加しています。過去問を網羅的に番号順で演習していましたが，なかなかアルゴリズムの理解が深まらず，実装することも慣れないなぁと思っていました。そこで，最近はアルゴリズム別に演習する方針に切り替えました。 参考に</description>
+    </item>
     
     <item>
       <title>学習計画#1</title>

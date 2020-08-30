@@ -14,17 +14,17 @@
     <title>
         
            
-               Link List &vert; ebisen blog
+               ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編 &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="Link List - ebiesn blog">
-    <meta itemprop="name" content="Link List">
-    <meta itemprop="description" content="Link List - ebiesn blog">
-    <meta property="og:title" content="Link List">
-    <meta property="og:description" content="Link List - ebiesn blog">
+    <meta name="description" content="ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編 - ebiesn blog">
+    <meta itemprop="name" content="ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編">
+    <meta itemprop="description" content="ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編 - ebiesn blog">
+    <meta property="og:title" content="ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編">
+    <meta property="og:description" content="ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編 - ebiesn blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/linklist/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/arihonchecklist/">
     <meta property="og:site_name" content="ebisen blog">
     <meta property="og:type" content="article">
 
@@ -34,8 +34,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/article/linklist/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/article/linklist/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/arihonchecklist/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/arihonchecklist/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -117,7 +117,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://ebisenttt.github.io/blog/article/linklist/">
+            <a class="bubble" href="https://ebisenttt.github.io/blog/article/arihonchecklist/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -126,15 +126,15 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/article/linklist/">
-            Link List
+        <a href="https://ebisenttt.github.io/blog/article/arihonchecklist/">
+            ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-08-19</span>
+                <span class="date moment">2020-08-30</span>
             
         
 
@@ -145,7 +145,7 @@
                 
                     
                     
-                        <a href="https://ebisenttt.github.io/blog/categories/">Categories</a>
+                        <a href="https://ebisenttt.github.io/blog/categories/atcoder/">AtCoder</a>
                     
                 
             </span>
@@ -155,19 +155,65 @@
     </div>
 
     
-        <p>このサイトの制作や競技プログラミングの過去問演習に参考にしたサイトを載せておきます。</p>
-<p><a href="https://qiita.com/drken/items/4a7869c5e304883f539b">DFS (深さ優先探索) 超入門！ 〜 グラフ・アルゴリズムの世界への入口 〜【前編】</a></p>
-<p>特に幅優先探索と深さ優先探索の違いについてわかりやすくまとめている。</p>
-<p><a href="https://visualgo.net/ja">VISUALGO.NET</a></p>
-<p>アルゴリズムをアニメーションで視覚的にわかりやすく捉えることができる。UIも綺麗で素晴らしい。</p>
+        <p>定期的にAtCoderのABCに参加しています。過去問を網羅的に番号順で演習していましたが，なかなかアルゴリズムの理解が深まらず，実装することも慣れないなぁと思っていました。そこで，最近はアルゴリズム別に演習する方針に切り替えました。</p>
+<p>参考にさせてもらっているサイトは『<a href="https://qiita.com/drken/items/e77685614f3c6bf86f44">AtCoder 版！蟻本 (初級編)</a>(著者: <a href="https://qiita.com/drken">@drken</a>)』です。競技プログラミングの参考書として有名な『蟻本』に掲載されている問題とAtCoderの過去問の対応をリストアップしています。『蟻本』もアルゴリズム別にまとめられているようで，ebisenの学習スタイルに適しているのでは，と考えて参考にさせてもらっています。</p>
+<p>この記事は，上記記事にリストアップされている過去問のebisenのACリストです。</p>
+<h2 id="ウォーミングアップ">ウォーミングアップ</h2>
+<ul>
+<li>
+<p><input checked="" disabled="" type="checkbox"> ARC 004 A 2点間距離の最大値</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> ABC 051 B Sum of Three Integers</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> ABC 085 C Otoshidama</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> AGC 013 C Ants on a Circle</p>
+</li>
+</ul>
+<h2 id="全探索">全探索</h2>
+<h3 id="bit全探索">bit全探索</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> ABC 045 C - たくさんの数式</li>
+<li><input checked="" disabled="" type="checkbox"> ABC 079 C - Train Ticket</li>
+<li><input checked="" disabled="" type="checkbox"> ABC 104 C - All Green
+めっちゃ時間かかりました…。どう全探索を使っていいか分からなかったので解説ACです。</li>
+<li><input checked="" disabled="" type="checkbox"> ARC 029 A - 高橋君とお肉
+　図があったおかげでbit全探索をどう使えばいいかわかりやすかった。</li>
+<li><input checked="" disabled="" type="checkbox"> ABC 002 D - 派閥
+　時間はかかりましたが，自力ACできました。D問題を解けたのが嬉しい。</li>
+</ul>
+<h3 id="dfs深さ優先探索">DFS(深さ優先探索)</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> ATC 001 A 深さ優先探索
+　多少時間がかかりましたが，自力ACできました。少しずつDFSの実装も慣れてきました。</li>
+<li><input checked="" disabled="" type="checkbox"> ARC 031 B 埋め立て
+　慣れてきてはいますが，やはり時間がかかります。なによりデバッグが大変…。いい方法ないでしょうか。</li>
+<li><input disabled="" type="checkbox"> ARC 037 B バウムテスト</li>
+<li><input disabled="" type="checkbox"> AOJ 1160 島はいくつある？</li>
+</ul>
 
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/atcoder/">atcoder</a>
+                    
+                
+            </div>
+        </div>
     
 
     

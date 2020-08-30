@@ -6,10 +6,19 @@
     <description>Recent content in Categories on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 26 Aug 2020 18:58:25 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 11:11:25 +0900</lastBuildDate>
     
 	<atom:link href="https://ebisenttt.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AtCoder</title>
+      <link>https://ebisenttt.github.io/blog/categories/atcoder/</link>
+      <pubDate>Sun, 30 Aug 2020 11:11:25 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/categories/atcoder/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>学習計画</title>
@@ -17,15 +26,6 @@
       <pubDate>Wed, 26 Aug 2020 18:58:25 +0900</pubDate>
       
       <guid>https://ebisenttt.github.io/blog/categories/%E5%AD%A6%E7%BF%92%E8%A8%88%E7%94%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AtCoder</title>
-      <link>https://ebisenttt.github.io/blog/categories/atcoder/</link>
-      <pubDate>Wed, 19 Aug 2020 12:09:33 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/categories/atcoder/</guid>
       <description></description>
     </item>
     
