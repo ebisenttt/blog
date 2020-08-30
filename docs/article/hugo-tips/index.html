@@ -14,17 +14,17 @@
     <title>
         
            
-               About Me &vert; ebisen blog
+               Hugoで作ったブログ記事をGithubにdeployする &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="About Me - ebiesn blog">
-    <meta itemprop="name" content="About Me">
-    <meta itemprop="description" content="About Me - ebiesn blog">
-    <meta property="og:title" content="About Me">
-    <meta property="og:description" content="About Me - ebiesn blog">
+    <meta name="description" content="Hugoで作ったブログ記事をGithubにdeployする - ebiesn blog">
+    <meta itemprop="name" content="Hugoで作ったブログ記事をGithubにdeployする">
+    <meta itemprop="description" content="Hugoで作ったブログ記事をGithubにdeployする - ebiesn blog">
+    <meta property="og:title" content="Hugoで作ったブログ記事をGithubにdeployする">
+    <meta property="og:description" content="Hugoで作ったブログ記事をGithubにdeployする - ebiesn blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/page/aboutme/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/hugo-tips/">
     <meta property="og:site_name" content="ebisen blog">
     <meta property="og:type" content="article">
 
@@ -34,8 +34,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/page/aboutme/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/page/aboutme/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/hugo-tips/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/hugo-tips/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -117,8 +117,8 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://ebisenttt.github.io/blog/page/aboutme/">
-    <i class="fas fa-fw fa-file"></i>
+            <a class="bubble" href="https://ebisenttt.github.io/blog/article/hugo-tips/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
 <article class="default article">
@@ -126,15 +126,15 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/page/aboutme/">
-            About Me
+        <a href="https://ebisenttt.github.io/blog/article/hugo-tips/">
+            Hugoで作ったブログ記事をGithubにdeployする
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-08-17</span>
+                <span class="date moment">2020-08-30</span>
             
         
 
@@ -146,26 +146,89 @@
     </div>
 
     
-        <p>プログラミング初学者です。プログラミングやその他趣味について，日々勉強したことをメモしながらアウトプットします。内容に間違いがあったり，より良い方法があればコメント頂けると嬉しいです。</p>
-<h3 id="言語">言語</h3>
-<p>HTML, CSS, Sass, JavaScript, C++, php, SQL</p>
-<h3 id="ツール">ツール</h3>
-<p>VSCode, Hugo, Git, Terminal, Tera Term</p>
-<h3 id="os">OS</h3>
-<p>Mac, Windows</p>
-<h3 id="web製作以外の興味">Web製作以外の興味</h3>
-<p>数学全般，統計学（多変量解析）</p>
+        <h2 id="はじめに">はじめに</h2>
+<p>このブログの記事作成の際は，Hugoで書いた記事をGithubPagesにデプロイしています。書いてからデプロイする作業が多少面倒だったので，これを簡単にする手順をまとめてみます。</p>
+<h2 id="これまでの手順">これまでの手順</h2>
+<p>hugoで記事作成ができたら，下の手順を踏んでいました。</p>
+<pre><code>hugo
+</code></pre><p>で<code>.md</code>ファイルから<code>.html</code>ファイルを生成し，</p>
+<pre><code>git add .
+</code></pre><p>で記事の&rsquo;.md&rsquo;ファイルをインデントに追加し，</p>
+<pre><code>git commit -m &quot;メモ&quot;
+</code></pre><p>でインデントリのファイルをローカルリポジトリにコミットし，</p>
+<pre><code>git push origin master
+</code></pre><p>でローカルリポジトリをリモートリポジトリの<code>master</code>ブランチに<code>push</code> する。</p>
+<p>こんな感じです。毎回タイプするのが以外と面倒。最初の<code>hugo</code>を忘れてしまうことがあります。また，ちょっとした修正をしたいだけのときは特に面倒です。</p>
+<h2 id="簡単にした手順">簡単にした手順</h2>
+<p><code>deploy.sh</code>というファイルを作業ディレクトリ直下に作っておいて，上の4つの手順をこのファイルに予め書いておきます。ファイルの中身は下の通りです。</p>
+<p>今回は，<code>hugo</code>で生成された<code>html</code>ファイルのみを<code>push</code>したいので，<code>cd docs</code>としています。</p>
+<pre><code>#!/bin/bash1
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# Build the project.
+hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd docs
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+</code></pre><h3 id="権限設定が必要">権限設定が必要</h3>
+<p>あとはコマンドラインで</p>
+<pre><code>./deploy.sh
+</code></pre><p>と打てばOK，と思いきや</p>
+<pre><code>permission denied
+</code></pre><p>許可されなかったと。権限の設定が必要です。</p>
+<p>ターミナルで次のコマンドを実行します。</p>
+<pre><code>chmod +x deploy.sh
+</code></pre><p>これで権限が与えられました。今度こそ</p>
+<pre><code>./deploy.sh
+</code></pre><p>を実行すれば，記事の生成からリモートリポジトリへの<code>push</code>まで行ってくれます。</p>
+<h2 id="参考サイト">参考サイト</h2>
+<p><a href="https://kray.jp/blog/git-why-explanation/">Git初心者に捧ぐ！Gitの「これなんで？」を解説します|KRAY</a></p>
+<p>Gitについてイラスト付きで解説されています。</p>
+<p><a href="https://qiita.com/sanstktkrsyhsk/items/ef88ddfb9fa8e7306e45">シェルスクリプトを使う前に</a></p>
+<p>権限設定についてはこちらを参考にしました。</p>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a></p>
+<p><code>deploy.sh</code>の内容はこちらを参考にしました。公式ドキュメントです。</p>
 
     
 </div>
 
+    
+<div class="footer">
+
 
     
-
-    
-<div class="footer no-tags">
-
-
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/hugo/">hugo</a>
+                    
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/github/">github</a>
+                    
+                
+            </div>
+        </div>
     
 
     
