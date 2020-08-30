@@ -14,17 +14,17 @@
     <title>
         
            
-               ABC015-C &vert; ebisen blog
+               200828の学習 &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="ABC015-C - ebiesn blog">
-    <meta itemprop="name" content="ABC015-C">
-    <meta itemprop="description" content="ABC015-C - ebiesn blog">
-    <meta property="og:title" content="ABC015-C">
-    <meta property="og:description" content="ABC015-C - ebiesn blog">
+    <meta name="description" content="200828の学習 - ebiesn blog">
+    <meta itemprop="name" content="200828の学習">
+    <meta itemprop="description" content="200828の学習 - ebiesn blog">
+    <meta property="og:title" content="200828の学習">
+    <meta property="og:description" content="200828の学習 - ebiesn blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/code/abc015c/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/200828/">
     <meta property="og:site_name" content="ebisen blog">
     <meta property="og:type" content="article">
 
@@ -34,8 +34,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/code/abc015c/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/code/abc015c/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/200828/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/200828/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -117,8 +117,8 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://ebisenttt.github.io/blog/code/abc015c/">
-    <i class="fas fa-fw fa-code"></i>
+            <a class="bubble" href="https://ebisenttt.github.io/blog/article/200828/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
 <article class="default article">
@@ -126,174 +126,38 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/code/abc015c/">
-            ABC015-C
+        <a href="https://ebisenttt.github.io/blog/article/200828/">
+            200828の学習
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-08-19</span>
+                <span class="date moment">2020-08-29</span>
             
         
 
         
 
         
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://ebisenttt.github.io/blog/categories/atcoder/">AtCoder</a>
-                    
-                
-            </span>
-        
 
         
     </div>
 
     
-        <p>AtCoder茶色を目指し，練習のためABCのC問題を全問AC，解説ACすることがとりあえずの目標。
-今回はABC015のC問題を解いてみた。</p>
-<h3 id="問題">問題</h3>
-<p><a href="https://atcoder.jp/contests/abc015/tasks/abc015_3">AtCoder ABC015 C</a></p>
-<h3 id="感想">感想</h3>
-<p>まず排他的論理和（XOR）をまともに勉強していなかったのでそこから。
-さらに可変長配列の要素の組み合わせをどう作るかに手こずった。
-最終的に<code>queue</code>に<code>vector</code>を<code>push</code>, <code>pop</code>することを繰り返す形にした。
-<code>queue</code>の使い方にまだ慣れていないが自力で書けたことが少し嬉しい。
-コメントアウトしているところは一度<code>WA</code>が出てしまい，<code>n</code>, <code>k</code>を最大値にしてみたため。
-結局原因はそこではなく，配列の添字を間違えていただけだった。</p>
-<h3 id="解答">解答</h3>
-<p><a href="https://atcoder.jp/contests/abc015/submissions/16031331">提出#16031331</a></p>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;cmath&gt;
-#include &lt;algorithm&gt;
-#include &lt;numeric&gt;
-#include &lt;iomanip&gt;
-#include &lt;queue&gt;
-using namespace std;
-#define REP(i, n) for(int i = 0; i &lt; n; i++)
-#define FOR(i, m, n) for(int i = m; i &lt; n; i++)
-#define ALL(x) (x).begin(),(x).end() //sortなどの引数を省略したい
-#define SIZE(x) ((ll)(x).size()) //sizeをsize_tからllに直しておく
-#define MAX(x) *max_element(ALL(x)) //最大値を求める
-#define MIN(x) *min_element(ALL(x)) //最小値を求める
-typedef long long ll;
-typedef long double ld;
-int main(){
-    ll n,k; cin&gt;&gt;n&gt;&gt;k;
-    //ll n=5,k=5;
-    vector&lt;vector&lt;ll&gt;&gt; v(n,vector&lt;ll&gt; (k));
-    REP(i,n)REP(j,k)cin&gt;&gt;v[i][j];
-    //REP(i,n)REP(j,k)v[i][j]=127;
-    vector&lt;vector&lt;ll&gt;&gt; w;
-    queue&lt;vector&lt;ll&gt;&gt; q;
-    q.push({});
-    while(!q.empty()){
-        vector&lt;ll&gt; x=q.front();
-        ll s=SIZE(x);
-        if(s&lt;n){
-            REP(j,k){
-                vector&lt;ll&gt; y=x;
-                y.push_back(v[s][j]);
-                q.push(y);
-            }
-            q.pop();
-        }else{
-            w.push_back(x);
-            q.pop();
-        }
-    }
-    string ans=&quot;Nothing&quot;;
-    REP(i,SIZE(w)){
-        ll a=0;
-        REP(j,n){
-            a^=w[i][j];
-        }
-        if(!a){ans=&quot;Found&quot;;break;}
-    }
-    cout&lt;&lt;ans&lt;&lt;endl;
-    return 0;
-}
-</code></pre><h3 id="公式解説">公式解説</h3>
-<p><a href="https://www.slideshare.net/chokudai/abc015">解説</a></p>
-<h3 id="解説を読んで">解説を読んで</h3>
-<p>再帰関数で書けそうだということは，なんとなく想像できたが，まだ再帰関数に苦手意識がある。
-ユークリッドの互除法くらいなら書けるが…。
-さらに「深さ優先探索」は名前は知っているが，理解できていない。
-案外Wikipediaの「再帰あり」の解説がわかりやすかったのでリンクを載せておく。</p>
-<p><a href="https://ja.wikipedia.org/wiki/%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2">Wikipedia 深さ優先探索</a></p>
-<p>今回は訪問済みかどうかメモする必要がない。なぜなら質問の番号順，選択肢順に上からすべて訪問していけばいいから。
-解説を参考に解答を書き直してみた（解答2）が，めちゃくちゃシンプルになった。
-こういう名前がついたアルゴリズムは覚えていかないといけないなぁ。</p>
-<h3 id="解答2">解答2</h3>
-<p><a href="https://atcoder.jp/contests/abc015/submissions/16032134">提出#16032134</a></p>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;cmath&gt;
-#include &lt;algorithm&gt;
-#include &lt;numeric&gt;
-#include &lt;iomanip&gt;
-#include &lt;queue&gt;
-using namespace std;
-#define REP(i, n) for(int i = 0; i &lt; n; i++)
-#define FOR(i, m, n) for(int i = m; i &lt; n; i++)
-#define ALL(x) (x).begin(),(x).end() //sortなどの引数を省略したい
-#define SIZE(x) ((ll)(x).size()) //sizeをsize_tからllに直しておく
-#define MAX(x) *max_element(ALL(x)) //最大値を求める
-#define MIN(x) *min_element(ALL(x)) //最小値を求める
-typedef long long ll;
-typedef long double ld;
+        <h2 id="atcoder-group-contesthttpsatcoderjpcontestsagc012tasksagc012_a"><a href="https://atcoder.jp/contests/agc012/tasks/agc012_a">AtCoder Group Contest</a></h2>
+<p><code>greater&lt;&gt;</code>で<code>sort</code>してから2個飛ばしで足して行きました。何度か<code>WA</code>しましたが単純な書き間違えでした。</p>
+<h2 id="数を3つ選ぶマンhttpsatcoderjpcontestsabc028tasksabc028_c"><a href="https://atcoder.jp/contests/abc028/tasks/abc028_c">数を3つ選ぶマン</a></h2>
+<p>「A+D+Eじゃん簡単〜。」って思ってたら<code>WA</code>くらいました(笑)解説ACです。</p>
 
-bool dfs(ll numq, ll value, ll n, ll k, vector&lt;vector&lt;ll&gt;&gt; v){
-    if(numq==n)return(value==0);
-    REP(i,k){
-        if(dfs(numq+1,value^v[numq][i],n,k,v))return true;
-    }
-    return false;
-}
-
-int main(){
-    ll n,k; cin&gt;&gt;n&gt;&gt;k;
-    vector&lt;vector&lt;ll&gt;&gt; v(n,vector&lt;ll&gt; (k));
-    REP(i,n)REP(j,k)cin&gt;&gt;v[i][j];
-    ll numq=0, value=0;
-    bool is=dfs(numq, value, n, k, v);
-    string ans;
-    if(is)ans=&quot;Found&quot;;
-    else ans=&quot;Nothing&quot;;
-    cout&lt;&lt;ans&lt;&lt;endl;
-    return 0;
-}
-</code></pre>
     
 </div>
 
     
-<div class="footer">
+<div class="footer no-tags">
 
 
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://ebisenttt.github.io/blog/tags/abc/">abc</a>
-                    
-                
-                    
-                    
-                    <a href="https://ebisenttt.github.io/blog/tags/oxr/">oxr</a>
-                    
-                
-            </div>
-        </div>
     
 
     

@@ -6,10 +6,19 @@
     <description>Recent content in Articles on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 29 Aug 2020 06:25:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2020 12:56:25 +0900</lastBuildDate>
     
 	<atom:link href="https://ebisenttt.github.io/blog/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>200828の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200828/</link>
+      <pubDate>Sat, 29 Aug 2020 12:56:25 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200828/</guid>
+      <description>AtCoder Group Contest greater&amp;lt;&amp;gt;でsortしてから2個飛ばしで足して行きました。何度かWAしましたが単純な書き間違えでした。 数を3つ選ぶマン 「A+D+Eじゃん簡単〜。」って思ってたらWAくらいました(笑)解説ACです。</description>
+    </item>
     
     <item>
       <title>200827の学習</title>
