@@ -3,13 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ebisenttt.github.io/blog/article/200829/</loc>
+    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ebisenttt.github.io/blog/tags/arcoder/</loc>
+    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ebisenttt.github.io/blog/article/</loc>
-    <lastmod>2020-08-30T17:01:12+09:00</lastmod>
+    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ebisenttt.github.io/blog/categories/</loc>
+    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://ebisenttt.github.io/blog/</loc>
-    <lastmod>2020-08-30T17:01:12+09:00</lastmod>
+    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ebisenttt.github.io/blog/tags/</loc>
+    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ebisenttt.github.io/blog/categories/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/</loc>
+    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
   </url>
   
   <url>
@@ -28,11 +53,6 @@
   </url>
   
   <url>
-    <loc>https://ebisenttt.github.io/blog/tags/</loc>
-    <lastmod>2020-08-30T17:01:12+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ebisenttt.github.io/blog/article/arihonchecklist/</loc>
     <lastmod>2020-08-30T11:11:25+09:00</lastmod>
   </url>
@@ -44,11 +64,6 @@
   
   <url>
     <loc>https://ebisenttt.github.io/blog/tags/atcoder/</loc>
-    <lastmod>2020-08-30T11:11:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ebisenttt.github.io/blog/categories/</loc>
     <lastmod>2020-08-30T11:11:25+09:00</lastmod>
   </url>
   

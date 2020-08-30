@@ -6,10 +6,19 @@
     <description>Recent content in Articles on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 30 Aug 2020 17:01:12 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 17:47:26 +0900</lastBuildDate>
     
 	<atom:link href="https://ebisenttt.github.io/blog/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>200829の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200829/</link>
+      <pubDate>Sun, 30 Aug 2020 17:47:26 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200829/</guid>
+      <description>この日は午前中は仕事だったので，夕方くらいから作業開始でした。週末なので，アルゴリズム別にAtCoderの過去問演習をしました。夜は外出したので量は多くないです。 A - 2点間距離の最大値 ( The longest distance ) 灰diffなのでなんなくAC B - Sum of Three Integers TLE</description>
+    </item>
     
     <item>
       <title>Hugoで作ったブログ記事をGithubにdeployする</title>
