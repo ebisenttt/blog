@@ -3,27 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ebisenttt.github.io/blog/article/200830/</loc>
+    <lastmod>2020-09-01T04:35:21+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ebisenttt.github.io/blog/article/</loc>
+    <lastmod>2020-09-01T04:35:21+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ebisenttt.github.io/blog/</loc>
+    <lastmod>2020-09-01T04:35:21+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ebisenttt.github.io/blog/article/200829/</loc>
     <lastmod>2020-08-30T17:47:26+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ebisenttt.github.io/blog/tags/arcoder/</loc>
-    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ebisenttt.github.io/blog/article/</loc>
+    <loc>https://ebisenttt.github.io/blog/tags/atcoder/</loc>
     <lastmod>2020-08-30T17:47:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://ebisenttt.github.io/blog/categories/</loc>
-    <lastmod>2020-08-30T17:47:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ebisenttt.github.io/blog/</loc>
     <lastmod>2020-08-30T17:47:26+09:00</lastmod>
   </url>
   
@@ -59,11 +64,6 @@
   
   <url>
     <loc>https://ebisenttt.github.io/blog/categories/atcoder/</loc>
-    <lastmod>2020-08-30T11:11:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ebisenttt.github.io/blog/tags/atcoder/</loc>
     <lastmod>2020-08-30T11:11:25+09:00</lastmod>
   </url>
   
