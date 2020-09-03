@@ -5,10 +5,37 @@
     <description>Recent content on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 01 Sep 2020 04:35:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 06:05:50 +0900</lastBuildDate>
     
         <atom:link href="https://ebisenttt.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>200902</title>
+      <link>https://ebisenttt.github.io/blog/article/200902/</link>
+      <pubDate>Fri, 04 Sep 2020 06:05:50 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200902/</guid>
+      <description>GoogleCalssroomの提出物を一括ダウンロードするプログラム作成 この日もGoogleAPIをいじってました。OAuthについてあまり知らなかったので認証周りで時間がかかってしまっています。 まだ完成しておらず時間があるので手作業でや</description>
+    </item>
+    
+    <item>
+      <title>200901の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200901/</link>
+      <pubDate>Fri, 04 Sep 2020 06:05:45 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200901/</guid>
+      <description>Google Classroomへの自動投稿アプリ作成 今日はAtCoderの過去問演習ではなく，GAS(Google Apps Script)でGoogle APIを使ったアプリを作っていました。言語はJavaScriptです。あまりJavaScriptに触ったこ</description>
+    </item>
+    
+    <item>
+      <title>200831の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200831/</link>
+      <pubDate>Fri, 04 Sep 2020 06:05:31 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200831/</guid>
+      <description>この日もあまり量は多くないですね。平日の習慣を見直そうと思います。 C - 100 to 105 C - Poll mapを使いました。各要素の個数を値として記録しましたが，値が最大の要素を出力する方法に悩みました。最終的には，最大値を記録しておいて，値が最大値に一致する要</description>
+    </item>
     
     <item>
       <title>200830の学習</title>
