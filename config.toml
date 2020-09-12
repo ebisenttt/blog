@@ -19,7 +19,7 @@ hasCJKLanguage = true
 summaryLength = 120
 
 # Enable / Disable Google Analytics statistics for your site
-googleAnalytics = ""
+googleAnalytics = "UA-177822678-1"
 
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = "ebisenttt"
