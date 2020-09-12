@@ -6,10 +6,37 @@
     <description>Recent content in Articles on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 12 Sep 2020 16:01:17 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 16:03:35 +0900</lastBuildDate>
     
 	<atom:link href="https://ebisenttt.github.io/blog/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>200911の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200911/</link>
+      <pubDate>Sat, 12 Sep 2020 16:03:35 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200911/</guid>
+      <description>この日はいつもより時間を作れました。 AtCoder過去問 B - String Rotation queueを使ってfrontをpopしたりpushしたりして解きました。自力AC。 B - Contest with Drinks Easy 全ての時間を足して，それぞれの時間を置き換えて出力を繰り返しました。自力AC。 A -</description>
+    </item>
+    
+    <item>
+      <title>200909の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200909/</link>
+      <pubDate>Sat, 12 Sep 2020 16:03:07 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200909/</guid>
+      <description>AtCoder過去問演習 A - Wanna go back home 場合分けが多かったので，できるだけシンプルに書きたいと思いましたが結局4つの場合に分けました。もっといい方法があるのか…。自力AC。</description>
+    </item>
+    
+    <item>
+      <title>200908の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200908/</link>
+      <pubDate>Sat, 12 Sep 2020 16:02:26 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200908/</guid>
+      <description>AtCoder過去問演習 B - AtCoDeerくんとボール色塗り Kをかけまくる問題。long longを使ったという点くらいです。自力AC。</description>
+    </item>
     
     <item>
       <title>200907の学習</title>
