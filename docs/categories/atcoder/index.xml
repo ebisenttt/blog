@@ -6,10 +6,28 @@
     <description>Recent content in AtCoder on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 30 Aug 2020 11:11:25 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 16:01:17 +0900</lastBuildDate>
     
 	<atom:link href="https://ebisenttt.github.io/blog/categories/atcoder/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>200907の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200907/</link>
+      <pubDate>Sat, 12 Sep 2020 16:01:17 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200907/</guid>
+      <description>AtCoder過去問演習 ### D - カード並べ next_permutationを使いました。自力AC。 ### A - おつり 10円忘れてました笑。自力AC。 phpとsql 業務で簡単な作業を頼まれたので初歩的なことから調べながらいじっていました。内容はエラー</description>
+    </item>
+    
+    <item>
+      <title>200906の学習</title>
+      <link>https://ebisenttt.github.io/blog/article/200906/</link>
+      <pubDate>Sat, 12 Sep 2020 16:00:31 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/200906/</guid>
+      <description>AtCoder過去問演習 A - Darker and Darker 初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。 C - 器物損壊！高橋君 前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想がで</description>
+    </item>
     
     <item>
       <title>ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編</title>
