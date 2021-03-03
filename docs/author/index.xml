@@ -5,10 +5,6 @@
     <link>https://ebisenttt.github.io/blog/author/</link>
     <description>Recent content in Author on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-JP</language>
-    
-	<atom:link href="https://ebisenttt.github.io/blog/author/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>ja-JP</language><atom:link href="https://ebisenttt.github.io/blog/author/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

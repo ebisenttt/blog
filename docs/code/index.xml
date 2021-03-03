@@ -6,11 +6,7 @@
     <description>Recent content in Codes on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 19 Aug 2020 12:09:33 +0900</lastBuildDate>
-    
-	<atom:link href="https://ebisenttt.github.io/blog/code/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 19 Aug 2020 12:09:33 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABC016-C</title>
       <link>https://ebisenttt.github.io/blog/code/abc016c/</link>
