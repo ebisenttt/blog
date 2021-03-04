@@ -14,17 +14,17 @@
     <title>
         
            
-               200901の学習 &vert; ebisen blog
+               はじめに | 初学者によるRuby on Rails Tutorial学習記録 &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="200901の学習 - ebiesn blog">
-    <meta itemprop="name" content="200901の学習">
-    <meta itemprop="description" content="200901の学習 - ebiesn blog">
-    <meta property="og:title" content="200901の学習">
-    <meta property="og:description" content="200901の学習 - ebiesn blog">
+    <meta name="description" content="はじめに | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
+    <meta itemprop="name" content="はじめに | 初学者によるRuby on Rails Tutorial学習記録">
+    <meta itemprop="description" content="はじめに | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
+    <meta property="og:title" content="はじめに | 初学者によるRuby on Rails Tutorial学習記録">
+    <meta property="og:description" content="はじめに | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/200901/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/">
     <meta property="og:site_name" content="ebisen blog">
     <meta property="og:type" content="article">
 
@@ -34,8 +34,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/article/200901/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/article/200901/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/ruby_on_rails_tutorial_0/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/ruby_on_rails_tutorial_0/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -109,7 +109,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://ebisenttt.github.io/blog/article/200901/">
+            <a class="bubble" href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -118,50 +118,89 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/article/200901/">
-            200901の学習
+        <a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/">
+            はじめに | 初学者によるRuby on Rails Tutorial学習記録
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-09-04</span>
+                <span class="date moment">2021-03-03</span>
             
         
 
         
 
         
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://ebisenttt.github.io/blog/categories/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/">”今日の学習&#34;</a>
-                    
-                
-            </span>
-        
 
         
     </div>
 
     
-        <h2 id="google-classroomへの自動投稿アプリ作成">Google Classroomへの自動投稿アプリ作成</h2>
-<p>今日はAtCoderの過去問演習ではなく，GAS(Google Apps Script)でGoogle APIを使ったアプリを作っていました。言語はJavaScriptです。あまりJavaScriptに触ったことはありませんでしたが，コールバック関数について少し勉強したくらいで，ほとんどC++で書いている時と考え方は変わりませんでした。<br>
-ただ多くの変数や関数を管理するのは慣れない作業で手間取りました。</p>
-<p>このプログラムは毎日決まった時間にGoogleForm未提出者名を GoogleClassroomのストリームに投稿するものです。</p>
-<p>詳細については後日に単独の記事を作ろうと思います。</p>
-<p>&lt;追記&gt;
-無事動きました！未提出者も0になりました。</p>
+        <h1 id="この記事の目的">この記事の目的</h1>
+<p>この記事の目的は，「プログラミング初学者がRuby on Rails Tutorialで学習した際につまづいた点を記録し，共有すること」です。
+Ruby on Rails Tutorialは日本語でとても丁寧に書かれた教材で，高く評価されています。しかしながら，初学者にとってはつまずくポイントがたくさんあります（つまずきながら学習して「熟練」を目指すことを想定されている教材であることは承知しています）。
+特に，教材が作成されたあとにアップデートが入ったソフトウェアやGemのバージョン違いによるエラー，警告が大量に出ることがあります。私はそのエラー，警告を解消するために多くの時間を必要としました。
+StackoverflowやGiuhubのissue，Qiitaなどで共有された情報を見ながら，初学者なりになんとか学習を続けられています。同じような状況にある方に少しでも貢献できたら幸いです。</p>
+<h1 id="学習環境">学習環境</h1>
+<h2 id="教材">教材</h2>
+<p>Ruby on Rails on Tutorial 第6版</p>
+<h2 id="使用ハード">使用ハード</h2>
+<p>Mac Book (Ratina, 12-inch, 2017)</p>
+<h2 id="使用ソフト">使用ソフト</h2>
+<ul>
+<li>Ruby 2.7.2</li>
+<li>Rails 6.1.3</li>
+<li>terminal</li>
+<li>vim</li>
+</ul>
+<h1 id="各章でのつまずき">各章でのつまずき</h1>
+<h2 id="学習済み">学習済み</h2>
+<ul>
+<li>1章（執筆中）</li>
+<li>2章（執筆中）</li>
+<li>3章（執筆中）</li>
+</ul>
+<h2 id="これから学習予定">これから学習予定</h2>
+<ul>
+<li>4章</li>
+<li>5章</li>
+<li>6章</li>
+<li>7章</li>
+<li>8章</li>
+<li>9章</li>
+<li>10章</li>
+<li>11章</li>
+<li>12章</li>
+<li>13章</li>
+<li>14章</li>
+</ul>
 
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/ruby/">ruby</a>
+                    
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/rails/">rails</a>
+                    
+                
+            </div>
+        </div>
     
 
     

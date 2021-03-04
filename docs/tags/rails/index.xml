@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rails on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/tags/rails/</link>
+    <description>Recent content in rails on ebisen blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Wed, 03 Mar 2021 17:01:50 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>はじめに | 初学者によるRuby on Rails Tutorial学習記録</title>
+      <link>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/</link>
+      <pubDate>Wed, 03 Mar 2021 17:01:50 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/</guid>
+      <description>この記事の目的 この記事の目的は，「プログラミング初学者がRuby on Rails Tutorialで学習した際につまづいた点を記録し，共有すること」です。 Ruby on Rails Tutorialは日本語でとても丁寧に書かれた教材で，高く評価されています。しかしながら，初学</description>
+    </item>
+    
+  </channel>
+</rss>

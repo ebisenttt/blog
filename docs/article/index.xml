@@ -6,7 +6,16 @@
     <description>Recent content in Articles on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 13 Sep 2020 14:00:42 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/article/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Mar 2021 17:01:50 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/article/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>はじめに | 初学者によるRuby on Rails Tutorial学習記録</title>
+      <link>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/</link>
+      <pubDate>Wed, 03 Mar 2021 17:01:50 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/</guid>
+      <description>この記事の目的 この記事の目的は，「プログラミング初学者がRuby on Rails Tutorialで学習した際につまづいた点を記録し，共有すること」です。 Ruby on Rails Tutorialは日本語でとても丁寧に書かれた教材で，高く評価されています。しかしながら，初学</description>
+    </item>
+    
     <item>
       <title>200912の学習</title>
       <link>https://ebisenttt.github.io/blog/article/200912/</link>
@@ -113,69 +122,6 @@
       
       <guid>https://ebisenttt.github.io/blog/article/hugo-tips/</guid>
       <description>はじめに このブログの記事作成の際は，Hugoで書いた記事をGithubPagesにデプロイしています。書いてからデプロイする作業が多少面倒だったので，これを簡単にする手順をまとめてみます。 これまでの手順 hugoで記事作成ができたら，下の手順</description>
-    </item>
-    
-    <item>
-      <title>ACチェックリスト-『AtCoder 版！蟻本 (初級編)』編</title>
-      <link>https://ebisenttt.github.io/blog/article/arihonchecklist/</link>
-      <pubDate>Sun, 30 Aug 2020 11:11:25 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/article/arihonchecklist/</guid>
-      <description>定期的にAtCoderのABCに参加しています。過去問を網羅的に番号順で演習していましたが，なかなかアルゴリズムの理解が深まらず，実装することも慣れないなぁと思っていました。そこで，最近はアルゴリズム別に演習する方針に切り替えました。 参考に</description>
-    </item>
-    
-    <item>
-      <title>200828の学習</title>
-      <link>https://ebisenttt.github.io/blog/article/200828/</link>
-      <pubDate>Sat, 29 Aug 2020 12:56:25 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/article/200828/</guid>
-      <description>AtCoder Group Contest greater&amp;lt;&amp;gt;でsortしてから2個飛ばしで足して行きました。何度かWAしましたが単純な書き間違えでした。 数を3つ選ぶマン 「A+D+Eじゃん簡単〜。」って思ってたらWAくらいました(笑)解説ACです。</description>
-    </item>
-    
-    <item>
-      <title>200827の学習</title>
-      <link>https://ebisenttt.github.io/blog/article/200827/</link>
-      <pubDate>Sat, 29 Aug 2020 06:25:00 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/article/200827/</guid>
-      <description>この日はあまり量をこなせませんでした。 町の合併 最初に人数の合計を求めてから，過半数を超えている町があるか判定する。該当する町が複数あるようなテストケースは与えられない？ Multiplication 2 何度かTLEし諦めて解説AC。オーバーフローしないような工夫が必要な</description>
-    </item>
-    
-    <item>
-      <title>200825の学習</title>
-      <link>https://ebisenttt.github.io/blog/article/200825/</link>
-      <pubDate>Thu, 27 Aug 2020 21:33:54 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/article/200825/</guid>
-      <description>Ringo&amp;rsquo;s Favorite Numbers N=100のときの例外処理をしなければいけない事にしばらく気付けず。dとNの値をループさせて全ての計算結果を表示させたことで気づいた。ストレステストを素早くできるような環境構築が必要？ Multiplication 2 未だACせず。桁数が大きくなってしまうのでそこ</description>
-    </item>
-    
-    <item>
-      <title>200826の学習</title>
-      <link>https://ebisenttt.github.io/blog/article/200826/</link>
-      <pubDate>Thu, 27 Aug 2020 21:32:08 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/article/200826/</guid>
-      <description>この日は22時からzoom会議があったので，時間がある割には演習できなかった。積極的に時間を作りたい。 直方体 Dividing String 問題文の意図は汲み取れたが，どうもそのように読み取れない。Twitterでフォロワーの方にも補足頂いた。しかし「存在する」の部分</description>
-    </item>
-    
-    <item>
-      <title>学習計画#1</title>
-      <link>https://ebisenttt.github.io/blog/article/studyplan1/</link>
-      <pubDate>Wed, 26 Aug 2020 18:58:25 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/article/studyplan1/</guid>
-      <description>AtCoder 平日 現レート相当の問題を数問 AtCoderProblemsのRecommendationにて 難易度Moderate Don’t exclude solved problems で設定した時に表示される問題を数問解く。 これまでは夏期休暇で時間を取れる日が多かったが，今後毎日ABCのC問</description>
-    </item>
-    
-    <item>
-      <title>Link List</title>
-      <link>https://ebisenttt.github.io/blog/article/linklist/</link>
-      <pubDate>Wed, 19 Aug 2020 13:16:13 +0900</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/article/linklist/</guid>
-      <description>このサイトの制作や競技プログラミングの過去問演習に参考にしたサイトを載せておきます。 DFS (深さ優先探索) 超入門！ 〜 グラフ・アルゴリズムの世界への入口 〜【前編】 特に幅優先探索と深さ優先探索の違いについてわかりやすくまとめている。 VISUALGO.NET アルゴリズムを</description>
     </item>
     
   </channel>
