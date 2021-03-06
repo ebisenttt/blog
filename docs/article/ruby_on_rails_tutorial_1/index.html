@@ -14,17 +14,17 @@
     <title>
         
            
-               200906の学習 &vert; ebisen blog
+               1章 | 初学者によるRuby on Rails Tutorial学習記録 &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="200906の学習 - ebiesn blog">
-    <meta itemprop="name" content="200906の学習">
-    <meta itemprop="description" content="200906の学習 - ebiesn blog">
-    <meta property="og:title" content="200906の学習">
-    <meta property="og:description" content="200906の学習 - ebiesn blog">
+    <meta name="description" content="1章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
+    <meta itemprop="name" content="1章 | 初学者によるRuby on Rails Tutorial学習記録">
+    <meta itemprop="description" content="1章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
+    <meta property="og:title" content="1章 | 初学者によるRuby on Rails Tutorial学習記録">
+    <meta property="og:description" content="1章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/200906/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_1/">
     <meta property="og:site_name" content="ebisen blog">
     <meta property="og:type" content="article">
 
@@ -34,8 +34,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/article/200906/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/article/200906/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/ruby_on_rails_tutorial_1/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/ruby_on_rails_tutorial_1/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -109,7 +109,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://ebisenttt.github.io/blog/article/200906/">
+            <a class="bubble" href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_1/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -118,61 +118,87 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/article/200906/">
-            200906の学習
+        <a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_1/">
+            1章 | 初学者によるRuby on Rails Tutorial学習記録
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-09-12</span>
+                <span class="date moment">2021-03-03</span>
             
         
 
         
 
         
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://ebisenttt.github.io/blog/categories/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/">”今日の学習&#34;</a>
-                    
-                
-            </span>
-        
 
         
     </div>
 
     
-        <h2 id="atcoder過去問演習">AtCoder過去問演習</h2>
-<h3 id="a---darker-and-darkerhttpsatcoderjpcontestsagc033tasksagc033_a"><a href="https://atcoder.jp/contests/agc033/tasks/agc033_a">A - Darker and Darker</a></h3>
-<p>初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。</p>
-<h3 id="c---器物損壊高橋君httpsatcoderjpcontestsarc005tasksarc005_3"><a href="https://atcoder.jp/contests/arc005/tasks/arc005_3">C - 器物損壊！高橋君</a></h3>
-<p>前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想ができました。自力AC。</p>
-<h3 id="c---one-stroke-pathhttpsatcoderjpcontestsabc054tasksabc054_c"><a href="https://atcoder.jp/contests/abc054/tasks/abc054_c">C - One-stroke Path</a></h3>
-<p>next_permutationの問題は何度か解いたことがありました。自力AC。</p>
-<h2 id="vscode環境整備">VSCode環境整備</h2>
-<h3 id="デバッグビュー">デバッグビュー</h3>
-<p>F5でデバッグを始めると，以前はデバッグビューが自動で表示されましたが，最近は自動で表示されなくなっていました。</p>
-<p>Twitterで呟くとフォロワーさんから7月のVSCodeのアップデートが原因ではないかと助言を頂きました。</p>
-<p>公式ドキュメントを確認すると，最初のセッションが開始したときのみデバッグビューを表示するようにデフォルト設定が変更されたようでした。</p>
-<p><code>setting.json</code>の<code>debug.openDebug</code>を次のように修正したら元に戻りました。</p>
-<pre><code>&quot;debug.openDebug&quot; : &quot;openOnSessionStart&quot;
-</code></pre><h3 id="queueのデバッグ"><code>queue</code>のデバッグ</h3>
-<p>デバッグ時にC++のコンテナクラス(<code>vector</code>, <code>list</code>, <code>queue</code>など)の要素を表示させるためにVSCodeの拡張機能<code>Code-lldb</code>を使っています。(<code>&lt;bits/stdc++.h&gt;</code>を使えなくなる代償を払い，コンパイラーを<code>gcc</code>から<code>clang</code>に，デバッガーを<code>gdb</code>から<code>lldb</code>に変えてます…。いい方法があれば教えて下さい！！)</p>
-<p>しかし，最近BFSやDFSを実装できるようになり，<code>queue</code>の要素が表示されないことに気づきました。</p>
-<p>また<code>setting.json</code>を見直してみると</p>
+        <p>この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。
+<a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/">はじめに | 初学者によるRuby on Rails Tutorial学習記録</a></p>
+<h1 id="1章の所感">1章の所感</h1>
+<p>1章については，まだつまずくことが少なかったです。Gemfileがまだブラックボックス化しているため，学習中に私が気になった点を一部補足しておきます。</p>
+<h1 id="gemfile">Gemfile</h1>
+<h2 id="バージョン指定">バージョン指定</h2>
+<p><code>Gemfile</code>は使用する<code>gem</code>の種類やバージョンを使用するために作成するファイルです。その中で使用する<code>&gt;=</code>や<code>~&gt;</code>という記号について補足します。</p>
+<h3 id="バージョンの表記方法について">バージョンの表記方法について</h3>
+<p>まず，RubyやRailsに限らず，ソフトウェアのバージョンは</p>
+<pre><code>(メジャーバージョン).（マイナーバージョン）.（パッチバージョン）
+</code></pre><p>の形式で表記します。例えば，<code>1.2.3</code>というバージョンは，メジャーバージョンが1, マイナーバージョンが2, パッチバージョンが3であるバージョンを表します。
+なお，メジャーバージョンは大きなアップデート，マイナーバージョンは小さなアップデート，パッチバージョンはバグの修正等があったときに更新されます。</p>
+<h3 id="heading">&gt;=</h3>
+<p>例えば</p>
+<pre><code>gem 'sample', '&gt;= 1.2.3'
+</code></pre><p>は<code>sample</code>という<code>gem</code>の<code>1.2.3</code>以上のバージョンを指定しています。つまり，存在するバージョンのうち<code>1.2.3</code>以降の最も新しいバージョン（例えば<code>1.2.4</code>や<code>1.3.0</code>など）が使用されます。</p>
+<h3 id="heading-1">~&gt;</h3>
+<p>例えば</p>
+<pre><code>gem 'sample', '~&gt; 1.2.3'
+</code></pre><p>は<code>sample</code>という<code>gem</code>の<strong>メジャーバージョン</strong>が<code>1</code>で<strong>マイナーバージョン</strong>が<code>2</code><strong>以上</strong>のバージョン（例えば<code>1.3.2</code>など）を指定します。逆に言えば，メジャーバージョンが新しいもの（例えば<code>2.1.3</code>など）は使用されません。</p>
+<h2 id="bundle">bundle</h2>
+<p>まず<code>bundle</code>とは，<code>gem</code>の依存関係（例えば<code>gemA</code>を使うには<code>gemB</code>が必要というような関係）を管理するためのものです。ややこしいのは<code>bundle</code>自身も<code>gem</code>であるということです。様々な<code>gem</code>を使うにあたり，<code>bundle</code>がない状態では他の<code>gem</code>を管理できないため，まずは</p>
+<pre><code>gem install bundle
+</code></pre><p>で<code>bundle</code>をインストールします。その後，<code>bundle</code>以外の使いたい<code>gem</code>を<code>Gemfile</code>に記述し，</p>
+<pre><code>bundle install
+</code></pre><p>でインストールします。</p>
+<h2 id="gemfileとgemfilelock">GemfileとGemfile.lock</h2>
+<p>作成したアプリケーションのディレクトリ直下に<code>Gemfile</code>と<code>Gemfile.lock</code>というファイルがあるはずです。これらの役割について補足します。まず，<code>Gemfile</code>は（前述の通り），作成するアプリケーションに使用したい<code>gem</code>の種類とバージョンを<strong>人間が記述するため</strong>のファイルです。一方で<code>Gemfile.lock</code>は，作成するアプリケーションに使用したい<code>gem</code>の種類とバージョン，その依存関係を<strong>bundleがメモしておくための</strong>ファイルです。したがって，<strong>基本的には人間が<code>Gemfile</code>を編集することはあっても，<code>Gemfile.lock</code>を編集することはありません</strong>。<code>Gemfile.lock</code>を更新する際は，</p>
+<pre><code>bundle update
+</code></pre><p>とします。
+これまでの内容をまとめると，まず</p>
+<pre><code>gem install bundle \\bundleがインストールされる
+</code></pre><p>次に<code>Gemfile</code>を編集し，</p>
+<pre><code>bundle install \\Gemfileの内容に応じてgemがインストールされる
+bundle update  \\Gemfileの内容に応じてGemfile.lockが更新される
+</code></pre><p>という流れです。</p>
 
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/ruby/">ruby</a>
+                    
+                
+                    
+                    
+                    <a href="https://ebisenttt.github.io/blog/tags/rails/">rails</a>
+                    
+                
+            </div>
+        </div>
     
 
     

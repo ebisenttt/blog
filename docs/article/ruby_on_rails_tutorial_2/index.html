@@ -14,17 +14,17 @@
     <title>
         
            
-               200906の学習 &vert; ebisen blog
+               2章 | 初学者によるRuby on Rails Tutorial学習記録 &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="200906の学習 - ebiesn blog">
-    <meta itemprop="name" content="200906の学習">
-    <meta itemprop="description" content="200906の学習 - ebiesn blog">
-    <meta property="og:title" content="200906の学習">
-    <meta property="og:description" content="200906の学習 - ebiesn blog">
+    <meta name="description" content="2章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
+    <meta itemprop="name" content="2章 | 初学者によるRuby on Rails Tutorial学習記録">
+    <meta itemprop="description" content="2章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
+    <meta property="og:title" content="2章 | 初学者によるRuby on Rails Tutorial学習記録">
+    <meta property="og:description" content="2章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/200906/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/">
     <meta property="og:site_name" content="ebisen blog">
     <meta property="og:type" content="article">
 
@@ -34,8 +34,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/article/200906/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/article/200906/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/ruby_on_rails_tutorial_2/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/article/ruby_on_rails_tutorial_2/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -109,7 +109,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://ebisenttt.github.io/blog/article/200906/">
+            <a class="bubble" href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -118,15 +118,15 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/article/200906/">
-            200906の学習
+        <a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/">
+            2章 | 初学者によるRuby on Rails Tutorial学習記録
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-09-12</span>
+                <span class="date moment">2021-03-06</span>
             
         
 
@@ -137,7 +137,12 @@
                 
                     
                     
-                        <a href="https://ebisenttt.github.io/blog/categories/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/">”今日の学習&#34;</a>
+                        <a href="https://ebisenttt.github.io/blog/categories/ruby/">ruby</a>
+                    
+                
+                    
+                    
+                        <a href="https://ebisenttt.github.io/blog/categories/rails/">rails</a>
                     
                 
             </span>
@@ -147,25 +152,71 @@
     </div>
 
     
-        <h2 id="atcoder過去問演習">AtCoder過去問演習</h2>
-<h3 id="a---darker-and-darkerhttpsatcoderjpcontestsagc033tasksagc033_a"><a href="https://atcoder.jp/contests/agc033/tasks/agc033_a">A - Darker and Darker</a></h3>
-<p>初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。</p>
-<h3 id="c---器物損壊高橋君httpsatcoderjpcontestsarc005tasksarc005_3"><a href="https://atcoder.jp/contests/arc005/tasks/arc005_3">C - 器物損壊！高橋君</a></h3>
-<p>前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想ができました。自力AC。</p>
-<h3 id="c---one-stroke-pathhttpsatcoderjpcontestsabc054tasksabc054_c"><a href="https://atcoder.jp/contests/abc054/tasks/abc054_c">C - One-stroke Path</a></h3>
-<p>next_permutationの問題は何度か解いたことがありました。自力AC。</p>
-<h2 id="vscode環境整備">VSCode環境整備</h2>
-<h3 id="デバッグビュー">デバッグビュー</h3>
-<p>F5でデバッグを始めると，以前はデバッグビューが自動で表示されましたが，最近は自動で表示されなくなっていました。</p>
-<p>Twitterで呟くとフォロワーさんから7月のVSCodeのアップデートが原因ではないかと助言を頂きました。</p>
-<p>公式ドキュメントを確認すると，最初のセッションが開始したときのみデバッグビューを表示するようにデフォルト設定が変更されたようでした。</p>
-<p><code>setting.json</code>の<code>debug.openDebug</code>を次のように修正したら元に戻りました。</p>
-<pre><code>&quot;debug.openDebug&quot; : &quot;openOnSessionStart&quot;
-</code></pre><h3 id="queueのデバッグ"><code>queue</code>のデバッグ</h3>
-<p>デバッグ時にC++のコンテナクラス(<code>vector</code>, <code>list</code>, <code>queue</code>など)の要素を表示させるためにVSCodeの拡張機能<code>Code-lldb</code>を使っています。(<code>&lt;bits/stdc++.h&gt;</code>を使えなくなる代償を払い，コンパイラーを<code>gcc</code>から<code>clang</code>に，デバッガーを<code>gdb</code>から<code>lldb</code>に変えてます…。いい方法があれば教えて下さい！！)</p>
-<p>しかし，最近BFSやDFSを実装できるようになり，<code>queue</code>の要素が表示されないことに気づきました。</p>
-<p>また<code>setting.json</code>を見直してみると</p>
+        <p>この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。
+<a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/">はじめに | 初学者によるRuby on Rails Tutorial学習記録</a></p>
+<h1 id="2章の所感">2章の所感</h1>
+<p>2章では，データベースやherokuを使います。この辺の連携や認証でかなりつまずいてしまいました…。</p>
+<h1 id="データベースをmysqlへ">データベースをmysqlへ</h1>
+<p>Ruby on Rails Tutorialでは，データベースにPostgreSQLを使っていますが，複数の記事でMySQLが推奨されていることや，職場でもMySQLが使用されていることから，MySQLを使用することにしました。</p>
+<h2 id="gemfile">Gemfile</h2>
+<h3 id="削除するgem">削除するgem</h3>
+<ul>
+<li>sqlite3</li>
+<li>pg</li>
+</ul>
+<h3 id="追加するgem">追加するgem</h3>
+<ul>
+<li>mysql2
+Gemfileを編集したら</li>
+</ul>
+<pre><code>bundle install
+bundle update
+</code></pre><p>します。</p>
+<h2 id="mysqlでデータベースを作成">mysqlでデータベースを作成</h2>
+<pre><code>mysql -u root -p //まずはroot権限でログイン
+</code></pre><p>パスワードを要求されるので，何も入力せずにEnter。初期設定ではパスワードが設定されていません。</p>
+<pre><code>create database toy_app;
+</code></pre><p>データベースのテーブルやらなんやらは教材の指示に従えばOKです。</p>
+<h2 id="configdatabaseymlの設定">config/database.ymlの設定</h2>
+<p>この辺から私にはややこしかったです。<code>config/database.yml</code>を書き換えます。ここには，データベースに関する設定が書かれています。どこまで信用できるかはわかりませんが，私の設定を書いてみます。</p>
+<pre><code>default: &amp;default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false 
+  pool: 5
+  timeout: 5000
 
+development:
+  &lt;&lt;: *default
+  database: toy_app     //さっき設定したdatabase名
+  user: root
+  password:
+
+test:                  //まだtestは使わないのでとりあえずこの状態で
+  &lt;&lt;: *default
+
+production:
+  &lt;&lt;: *default
+  url: &lt;%= ENV['DATABASE_URL'] %&gt;      //これ以降になにが書いてるかは後でわかります
+  database: &lt;%= ENV['DB_NAME'] %&gt;
+  user: &lt;%= ENV['DB_USER'] %&gt;
+  password: &lt;%= ENV['DB_PASSWORD'] %&gt;
+</code></pre><p><code>default</code>, <code>development</code>, <code>test</code>, <code>production</code>の4つに別れていて，開発中に使う設定は<code>development</code>に，<code>heroku</code>にアップロードした後の本番環境で使う設定は<code>production</code>に書いてあります。<code>test</code>はこの時点ではあまり気にする必要がありません。<code>default</code>は全てに共通して設定したい項目です。</p>
+<h2 id="rails-dbmigrate"><code>rails db:migrate</code></h2>
+<p>とりあえず開発環境でのデータベースの設定が終わったので，</p>
+<pre><code>rails db:migrate
+</code></pre><p>をします。ここでエラーが出る場合は，これまで設定した<code>Gemfile</code>, <code>gem mysql2</code>, <code>database.yml</code>を疑ってください。</p>
+<h2 id="heroku">heroku</h2>
+<p>herokuでmysqlを使うための設定をしていきます。Qiitaにわかりやすい記事がたくさんあるので，この部分はお任せしちゃいます。</p>
+<p><a href="https://qiita.com/murakami-mm/items/9587e21fc0ed57c803d0">Herokuへのデプロイ方法【Heroku+Rails+MySQL】</a></p>
+<p>補足として私がつまずいたことを記録しておきます。</p>
+<h3 id="heroku-config"><code>heroku config</code></h3>
+<p><code>heroku config</code>では，<code>DATABASE_URL</code>を<code>mysql2</code>で始めることに注意します。</p>
+<h3 id="sslとherokuのstack">SSLとherokuのstack</h3>
+<pre><code>git push heroku main
+</code></pre><p>すると，SSL認証に失敗したという旨のエラーが起きました。しかし，<code>cleardb</code>の無料プラン<code>ignite</code>では，SSL認証は使えません。<code>heroku-20</code>ではなく<code>heroku-18</code>に変更することで解決しました。（理由はいまいちわからない…。）</p>
+<pre><code>heroku stack set:heroku-18
+</code></pre>
     
 </div>
 

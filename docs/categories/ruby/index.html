@@ -14,19 +14,18 @@
     <title>
         
            
-               200906の学習 &vert; ebisen blog
+               ruby &vert; ebisen blog
            
         
     </title>
-    <meta name="description" content="200906の学習 - ebiesn blog">
-    <meta itemprop="name" content="200906の学習">
-    <meta itemprop="description" content="200906の学習 - ebiesn blog">
-    <meta property="og:title" content="200906の学習">
-    <meta property="og:description" content="200906の学習 - ebiesn blog">
+    <meta name="description" content="ruby - ebiesn blog">
+    <meta itemprop="name" content="ruby">
+    <meta itemprop="description" content="ruby - ebiesn blog">
+    <meta property="og:title" content="ruby">
+    <meta property="og:description" content="ruby - ebiesn blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/200906/">
-    <meta property="og:site_name" content="ebisen blog">
-    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/categories/ruby/">
+    <meta property="og:site_name" content="ebisen blog"><meta property="og:type" content="website">
 
     
 
@@ -34,8 +33,8 @@
     <script src="/blog/modernizr-simple.js"></script>
 
     
-    <link href="/blog/article/200906/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="/blog/article/200906/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/categories/ruby/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="/blog/categories/ruby/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
@@ -107,9 +106,11 @@
 
     <div class="main container">
         
-    <div class="article-wrapper u-cf single">
-        
-            <a class="bubble" href="https://ebisenttt.github.io/blog/article/200906/">
+    
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -118,15 +119,15 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/article/200906/">
-            200906の学習
+        <a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/">
+            2章 | 初学者によるRuby on Rails Tutorial学習記録
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-09-12</span>
+                <span class="date moment">2021-03-06</span>
             
         
 
@@ -137,7 +138,12 @@
                 
                     
                     
-                        <a href="https://ebisenttt.github.io/blog/categories/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/">”今日の学習&#34;</a>
+                        <a href="https://ebisenttt.github.io/blog/categories/ruby/">ruby</a>
+                    
+                
+                    
+                    
+                        <a href="https://ebisenttt.github.io/blog/categories/rails/">rails</a>
                     
                 
             </span>
@@ -147,25 +153,11 @@
     </div>
 
     
-        <h2 id="atcoder過去問演習">AtCoder過去問演習</h2>
-<h3 id="a---darker-and-darkerhttpsatcoderjpcontestsagc033tasksagc033_a"><a href="https://atcoder.jp/contests/agc033/tasks/agc033_a">A - Darker and Darker</a></h3>
-<p>初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。</p>
-<h3 id="c---器物損壊高橋君httpsatcoderjpcontestsarc005tasksarc005_3"><a href="https://atcoder.jp/contests/arc005/tasks/arc005_3">C - 器物損壊！高橋君</a></h3>
-<p>前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想ができました。自力AC。</p>
-<h3 id="c---one-stroke-pathhttpsatcoderjpcontestsabc054tasksabc054_c"><a href="https://atcoder.jp/contests/abc054/tasks/abc054_c">C - One-stroke Path</a></h3>
-<p>next_permutationの問題は何度か解いたことがありました。自力AC。</p>
-<h2 id="vscode環境整備">VSCode環境整備</h2>
-<h3 id="デバッグビュー">デバッグビュー</h3>
-<p>F5でデバッグを始めると，以前はデバッグビューが自動で表示されましたが，最近は自動で表示されなくなっていました。</p>
-<p>Twitterで呟くとフォロワーさんから7月のVSCodeのアップデートが原因ではないかと助言を頂きました。</p>
-<p>公式ドキュメントを確認すると，最初のセッションが開始したときのみデバッグビューを表示するようにデフォルト設定が変更されたようでした。</p>
-<p><code>setting.json</code>の<code>debug.openDebug</code>を次のように修正したら元に戻りました。</p>
-<pre><code>&quot;debug.openDebug&quot; : &quot;openOnSessionStart&quot;
-</code></pre><h3 id="queueのデバッグ"><code>queue</code>のデバッグ</h3>
-<p>デバッグ時にC++のコンテナクラス(<code>vector</code>, <code>list</code>, <code>queue</code>など)の要素を表示させるためにVSCodeの拡張機能<code>Code-lldb</code>を使っています。(<code>&lt;bits/stdc++.h&gt;</code>を使えなくなる代償を払い，コンパイラーを<code>gcc</code>から<code>clang</code>に，デバッガーを<code>gdb</code>から<code>lldb</code>に変えてます…。いい方法があれば教えて下さい！！)</p>
-<p>しかし，最近BFSやDFSを実装できるようになり，<code>queue</code>の要素が表示されないことに気づきました。</p>
-<p>また<code>setting.json</code>を見直してみると</p>
+        この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。 はじめに | 初学者によるRuby on Rails Tutorial学習記録 2章の所感 2章では，データベースやherok
 
+        
+            <a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/" class="more">続きを読む</a>
+        
     
 </div>
 
@@ -180,38 +172,18 @@
 
 </article>
 
+            
+        </div>
+    
+
+    
+    <div class="paginator">
+        
+
         
     </div>
 
-    
-        <div id="comments-container">
-            <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "ebisenttt" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-            
-    <script defer src=""></script>
-    <div id="commento"></div>
 
-
-        </div>
-    
 
     </div>
 
@@ -310,7 +282,8 @@
                 
                 by ebisen
             </a>
-            
+            -
+            <a href="https://ebisenttt.github.io/blog/categories/ruby/index.xml">RSS</a>
         </div>
         <div class="author">
             <a href="https://github.com/Lednerb/bilberry-hugo-theme"
