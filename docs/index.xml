@@ -5,10 +5,19 @@
     <description>Recent content on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 06 Mar 2021 14:29:08 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 04 Aug 2022 16:20:47 +0900</lastBuildDate>
     
         <atom:link href="https://ebisenttt.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recursionの有料会員になってみた</title>
+      <link>https://ebisenttt.github.io/blog/article/220804_recursion_1/</link>
+      <pubDate>Thu, 04 Aug 2022 16:20:47 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/220804_recursion_1/</guid>
+      <description>Recursion の有料会員になってみたので，継続的に感想を書いていこうと思います Recursion とは Facebook のエンジニアの方が運営している CS（Computer Science）を学習するためのサイトです。 Recursion Recursion を始めようと思った理由 おすすめしているサイトが多い プログラミングの</description>
+    </item>
     
     <item>
       <title>2章 | 初学者によるRuby on Rails Tutorial学習記録</title>
