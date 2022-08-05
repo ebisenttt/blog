@@ -1,7 +1,8 @@
+<!DOCTYPE html>
+
 
   
-<!doctype html>
-<html class="no-js" lang="ja">
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="ja">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +11,7 @@
     <meta name="author" content="ebisenttt">
     <meta name="description" content="ebiesn blog">
     <meta name="keywords" content="ブログ,プログラミング,数学,blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts">
-    <meta name="generator" content="Hugo 0.81.0" />
+    <meta name="generator" content="Hugo 0.93.2" />
     <title>
         
            
@@ -18,7 +19,6 @@
            
         
     </title>
-    <meta name="description" content="2章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
     <meta itemprop="name" content="2章 | 初学者によるRuby on Rails Tutorial学習記録">
     <meta itemprop="description" content="2章 | 初学者によるRuby on Rails Tutorial学習記録 - ebiesn blog">
     <meta property="og:title" content="2章 | 初学者によるRuby on Rails Tutorial学習記録">
@@ -38,6 +38,8 @@
     <link href="/blog/article/ruby_on_rails_tutorial_2/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
+    
+    <link rel="canonical" href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/">
     
 
     <link rel="stylesheet" href="https://ebisenttt.github.io/blog/theme.css">
@@ -72,37 +74,37 @@
     
     <header>
 
-        <div class="container">
-            <div class="logo">
-                <a href="/blog" class="logo">
-                    
-                        <img src="/blog/icon.png" alt="">
-                    
+    <div class="container">
+        <div class="logo">
+            <a href="/blog" class="logo">
+                
+                    <img src="/blog/icon.png" alt="">
+                
 
-                    <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/blog">
+                    ebisen blog
                 </a>
-            </div>
-            <div class="titles">
-                <h3 class="title">
-                    <a href="/blog">
-                        ebisen blog
-                    </a>
-                </h3>
-
-                
-                    <span class="subtitle">プログラミング初学者の備忘録</span>
-                
-            </div>
+            </h3>
 
             
+                <span class="subtitle">プログラミング初学者の備忘録</span>
+            
+        </div>
 
-            
-                <div class="toggler">
-            
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-    </header>
+    </div>
+</header>
 
 
     <div class="main container">
@@ -152,6 +154,8 @@
     </div>
 
     
+        
+
         <p>この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。
 <a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/">はじめに | 初学者によるRuby on Rails Tutorial学習記録</a></p>
 <h1 id="2章の所感">2章の所感</h1>
@@ -169,17 +173,17 @@
 <li>mysql2
 Gemfileを編集したら</li>
 </ul>
-<pre><code>bundle install
+<pre tabindex="0"><code>bundle install
 bundle update
 </code></pre><p>します。</p>
 <h2 id="mysqlでデータベースを作成">mysqlでデータベースを作成</h2>
-<pre><code>mysql -u root -p //まずはroot権限でログイン
+<pre tabindex="0"><code>mysql -u root -p //まずはroot権限でログイン
 </code></pre><p>パスワードを要求されるので，何も入力せずにEnter。初期設定ではパスワードが設定されていません。</p>
-<pre><code>create database toy_app;
+<pre tabindex="0"><code>create database toy_app;
 </code></pre><p>データベースのテーブルやらなんやらは教材の指示に従えばOKです。</p>
 <h2 id="configdatabaseymlの設定">config/database.ymlの設定</h2>
 <p>この辺から私にはややこしかったです。<code>config/database.yml</code>を書き換えます。ここには，データベースに関する設定が書かれています。どこまで信用できるかはわかりませんが，私の設定を書いてみます。</p>
-<pre><code>default: &amp;default
+<pre tabindex="0"><code>default: &amp;default
   adapter: mysql2
   encoding: utf8
   reconnect: false 
@@ -197,14 +201,14 @@ test:                  //まだtestは使わないのでとりあえずこの状
 
 production:
   &lt;&lt;: *default
-  url: &lt;%= ENV['DATABASE_URL'] %&gt;      //これ以降になにが書いてるかは後でわかります
-  database: &lt;%= ENV['DB_NAME'] %&gt;
-  user: &lt;%= ENV['DB_USER'] %&gt;
-  password: &lt;%= ENV['DB_PASSWORD'] %&gt;
+  url: &lt;%= ENV[&#39;DATABASE_URL&#39;] %&gt;      //これ以降になにが書いてるかは後でわかります
+  database: &lt;%= ENV[&#39;DB_NAME&#39;] %&gt;
+  user: &lt;%= ENV[&#39;DB_USER&#39;] %&gt;
+  password: &lt;%= ENV[&#39;DB_PASSWORD&#39;] %&gt;
 </code></pre><p><code>default</code>, <code>development</code>, <code>test</code>, <code>production</code>の4つに別れていて，開発中に使う設定は<code>development</code>に，<code>heroku</code>にアップロードした後の本番環境で使う設定は<code>production</code>に書いてあります。<code>test</code>はこの時点ではあまり気にする必要がありません。<code>default</code>は全てに共通して設定したい項目です。</p>
 <h2 id="rails-dbmigrate"><code>rails db:migrate</code></h2>
 <p>とりあえず開発環境でのデータベースの設定が終わったので，</p>
-<pre><code>rails db:migrate
+<pre tabindex="0"><code>rails db:migrate
 </code></pre><p>をします。ここでエラーが出る場合は，これまで設定した<code>Gemfile</code>, <code>gem mysql2</code>, <code>database.yml</code>を疑ってください。</p>
 <h2 id="heroku">heroku</h2>
 <p>herokuでmysqlを使うための設定をしていきます。Qiitaにわかりやすい記事がたくさんあるので，この部分はお任せしちゃいます。</p>
@@ -213,9 +217,9 @@ production:
 <h3 id="heroku-config"><code>heroku config</code></h3>
 <p><code>heroku config</code>では，<code>DATABASE_URL</code>を<code>mysql2</code>で始めることに注意します。</p>
 <h3 id="sslとherokuのstack">SSLとherokuのstack</h3>
-<pre><code>git push heroku main
+<pre tabindex="0"><code>git push heroku main
 </code></pre><p>すると，SSL認証に失敗したという旨のエラーが起きました。しかし，<code>cleardb</code>の無料プラン<code>ignite</code>では，SSL認証は使えません。<code>heroku-20</code>ではなく<code>heroku-18</code>に変更することで解決しました。（理由はいまいちわからない…。）</p>
-<pre><code>heroku stack set:heroku-18
+<pre tabindex="0"><code>heroku stack set:heroku-18
 </code></pre>
     
 </div>
@@ -238,7 +242,7 @@ production:
         <div id="comments-container">
             <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -260,6 +264,10 @@ production:
     <script defer src=""></script>
     <div id="commento"></div>
 
+
+            
+
+            
 
         </div>
     
@@ -346,6 +354,12 @@ production:
             
 
             
+
+            
+            <div class="archive">
+                <a href="/blog/archive/"><strong>Archive</strong></a>
+            </div>
+            
         </div>
     </div>
 </footer>
@@ -375,19 +389,20 @@ production:
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-177822678-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 
     
 
 
-    <script type="text/javascript" src="https://ebisenttt.github.io/blog/theme.js"></script>
+    <script src="https://ebisenttt.github.io/blog/theme.js"></script>
 
     
     

@@ -1,7 +1,8 @@
+<!DOCTYPE html>
+
 
   
-<!doctype html>
-<html class="no-js" lang="ja">
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="ja">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +11,7 @@
     <meta name="author" content="ebisenttt">
     <meta name="description" content="ebiesn blog">
     <meta name="keywords" content="ブログ,プログラミング,数学,blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts">
-    <meta name="generator" content="Hugo 0.81.0" />
+    <meta name="generator" content="Hugo 0.93.2" />
     <title>
         
            
@@ -18,7 +19,6 @@
            
         
     </title>
-    <meta name="description" content="Hugoで作ったブログ記事をGithubにdeployする - ebiesn blog">
     <meta itemprop="name" content="Hugoで作ったブログ記事をGithubにdeployする">
     <meta itemprop="description" content="Hugoで作ったブログ記事をGithubにdeployする - ebiesn blog">
     <meta property="og:title" content="Hugoで作ったブログ記事をGithubにdeployする">
@@ -38,6 +38,8 @@
     <link href="/blog/article/hugo-tips/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
+    
+    <link rel="canonical" href="https://ebisenttt.github.io/blog/article/hugo-tips/">
     
 
     <link rel="stylesheet" href="https://ebisenttt.github.io/blog/theme.css">
@@ -72,37 +74,37 @@
     
     <header>
 
-        <div class="container">
-            <div class="logo">
-                <a href="/blog" class="logo">
-                    
-                        <img src="/blog/icon.png" alt="">
-                    
+    <div class="container">
+        <div class="logo">
+            <a href="/blog" class="logo">
+                
+                    <img src="/blog/icon.png" alt="">
+                
 
-                    <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/blog">
+                    ebisen blog
                 </a>
-            </div>
-            <div class="titles">
-                <h3 class="title">
-                    <a href="/blog">
-                        ebisen blog
-                    </a>
-                </h3>
-
-                
-                    <span class="subtitle">プログラミング初学者の備忘録</span>
-                
-            </div>
+            </h3>
 
             
+                <span class="subtitle">プログラミング初学者の備忘録</span>
+            
+        </div>
 
-            
-                <div class="toggler">
-            
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-    </header>
+    </div>
+</header>
 
 
     <div class="main container">
@@ -138,25 +140,27 @@
     </div>
 
     
+        
+
         <h2 id="はじめに">はじめに</h2>
 <p>このブログの記事作成の際は，Hugoで書いた記事をGithubPagesにデプロイしています。書いてからデプロイする作業が多少面倒だったので，これを簡単にする手順をまとめてみます。</p>
 <h2 id="これまでの手順">これまでの手順</h2>
 <p>hugoで記事作成ができたら，下の手順を踏んでいました。</p>
-<pre><code>hugo
+<pre tabindex="0"><code>hugo
 </code></pre><p>で<code>.md</code>ファイルから<code>.html</code>ファイルを生成し，</p>
-<pre><code>git add .
-</code></pre><p>で記事の'.md&rsquo;ファイルをインデックスに追加し，</p>
-<pre><code>git commit -m &quot;メモ&quot;
+<pre tabindex="0"><code>git add .
+</code></pre><p>で記事の&rsquo;.md&rsquo;ファイルをインデックスに追加し，</p>
+<pre tabindex="0"><code>git commit -m &#34;メモ&#34;
 </code></pre><p>でインデックスのファイルをローカルリポジトリにコミットし，</p>
-<pre><code>git push origin master
+<pre tabindex="0"><code>git push origin master
 </code></pre><p>でローカルリポジトリをリモートリポジトリの<code>master</code>ブランチに<code>push</code> する。</p>
 <p>こんな感じです。毎回タイプするのが以外と面倒。最初の<code>hugo</code>を忘れてしまうことがあります。また，ちょっとした修正をしたいだけのときは特に面倒です。</p>
 <h2 id="簡単にした手順">簡単にした手順</h2>
 <p><code>deploy.sh</code>というファイルを作業ディレクトリ直下に作っておいて，上の4つの手順をこのファイルに予め書いておきます。ファイルの中身は下の通りです。</p>
 <p>今回は，<code>hugo</code>で生成された<code>html</code>ファイルのみを<code>push</code>したいので，<code>cd docs</code>としています。</p>
-<pre><code>#!/bin/bash1
+<pre tabindex="0"><code>#!/bin/bash1
 
-echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;
 
 # Build the project.
 hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
@@ -167,11 +171,11 @@ cd docs
 git add .
 
 # Commit changes.
-msg=&quot;rebuilding site `date`&quot;
+msg=&#34;rebuilding site `date`&#34;
 if [ $# -eq 1 ]
-  then msg=&quot;$1&quot;
+  then msg=&#34;$1&#34;
 fi
-git commit -m &quot;$msg&quot;
+git commit -m &#34;$msg&#34;
 
 # Push source and build repos.
 git push origin master
@@ -180,14 +184,14 @@ git push origin master
 cd ..
 </code></pre><h3 id="権限設定が必要">権限設定が必要</h3>
 <p>あとはコマンドラインで</p>
-<pre><code>./deploy.sh
+<pre tabindex="0"><code>./deploy.sh
 </code></pre><p>と打てばOK，と思いきや</p>
-<pre><code>permission denied
+<pre tabindex="0"><code>permission denied
 </code></pre><p>許可されなかったと。権限の設定が必要です。</p>
 <p>ターミナルで次のコマンドを実行します。</p>
-<pre><code>chmod +x deploy.sh
+<pre tabindex="0"><code>chmod +x deploy.sh
 </code></pre><p>これで権限が与えられました。今度こそ</p>
-<pre><code>./deploy.sh
+<pre tabindex="0"><code>./deploy.sh
 </code></pre><p>を実行すれば，記事の生成からリモートリポジトリへの<code>push</code>まで行ってくれます。</p>
 <h2 id="参考サイト">参考サイト</h2>
 <p><a href="https://kray.jp/blog/git-why-explanation/">Git初心者に捧ぐ！Gitの「これなんで？」を解説します|KRAY</a></p>
@@ -235,7 +239,7 @@ cd ..
         <div id="comments-container">
             <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -257,6 +261,10 @@ cd ..
     <script defer src=""></script>
     <div id="commento"></div>
 
+
+            
+
+            
 
         </div>
     
@@ -343,6 +351,12 @@ cd ..
             
 
             
+
+            
+            <div class="archive">
+                <a href="/blog/archive/"><strong>Archive</strong></a>
+            </div>
+            
         </div>
     </div>
 </footer>
@@ -372,19 +386,20 @@ cd ..
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-177822678-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 
     
 
 
-    <script type="text/javascript" src="https://ebisenttt.github.io/blog/theme.js"></script>
+    <script src="https://ebisenttt.github.io/blog/theme.js"></script>
 
     
     
