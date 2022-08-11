@@ -15,16 +15,16 @@
     <title>
         
            
-               200908の学習 &vert; ebisen blog
+               TwitterAPI で新しいブログの記事を自動で投稿したい &vert; ebisen blog
            
         
     </title>
-    <meta itemprop="name" content="200908の学習">
-    <meta itemprop="description" content="200908の学習 - ebiesn blog">
-    <meta property="og:title" content="200908の学習">
-    <meta property="og:description" content="200908の学習 - ebiesn blog">
+    <meta itemprop="name" content="TwitterAPI で新しいブログの記事を自動で投稿したい">
+    <meta itemprop="description" content="TwitterAPI で新しいブログの記事を自動で投稿したい - ebiesn blog">
+    <meta property="og:title" content="TwitterAPI で新しいブログの記事を自動で投稿したい">
+    <meta property="og:description" content="TwitterAPI で新しいブログの記事を自動で投稿したい - ebiesn blog">
     <meta property="og:image" content="https://ebisenttt.github.io/icon.png">
-    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/200908/">
+    <meta property="og:url" content="https://ebisenttt.github.io/blog/article/20220808_tweetnewarticle/">
     <meta property="og:site_name" content="ebisen blog">
     <meta property="og:type" content="article">
 
@@ -34,12 +34,12 @@
     <script src="https://ebisenttt.github.io/blog/modernizr-simple.js"></script>
 
     
-    <link href="https://ebisenttt.github.io/blog/article/200908/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
-    <link href="https://ebisenttt.github.io/blog/article/200908/" rel="feed" type="application/rss+xml" title="ebisen blog" />
+    <link href="https://ebisenttt.github.io/blog/article/20220808_tweetnewarticle/" rel="alternate" type="application/rss+xml" title="ebisen blog" />
+    <link href="https://ebisenttt.github.io/blog/article/20220808_tweetnewarticle/" rel="feed" type="application/rss+xml" title="ebisen blog" />
     
 
     
-    <link rel="canonical" href="https://ebisenttt.github.io/blog/article/200908/">
+    <link rel="canonical" href="https://ebisenttt.github.io/blog/article/20220808_tweetnewarticle/">
     
 
     <link rel="stylesheet" href="https://ebisenttt.github.io/blog/theme.css">
@@ -115,7 +115,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://ebisenttt.github.io/blog/article/200908/">
+            <a class="bubble" href="https://ebisenttt.github.io/blog/article/20220808_tweetnewarticle/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -124,29 +124,20 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://ebisenttt.github.io/blog/article/200908/">
-            200908の学習
+        <a href="https://ebisenttt.github.io/blog/article/20220808_tweetnewarticle/">
+            TwitterAPI で新しいブログの記事を自動で投稿したい
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2020-09-12</span>
+                <span class="date moment">2022-08-08</span>
             
         
 
         
 
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://ebisenttt.github.io/blog/categories/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/">”今日の学習&#34;</a>
-                    
-                
-            </span>
         
 
         
@@ -155,10 +146,113 @@
     
         
 
-        <h2 id="atcoder過去問演習">AtCoder過去問演習</h2>
-<h3 id="b---atcodeerくんとボール色塗りhttpsatcoderjpcontestsabc046tasksabc046_b"><a href="https://atcoder.jp/contests/abc046/tasks/abc046_b">B - AtCoDeerくんとボール色塗り</a></h3>
-<p>Kをかけまくる問題。<code>long long</code>を使ったという点くらいです。自力AC。</p>
+        <h1 id="twitterapi-で新しいブログの記事を自動で投稿したい">TwitterAPI で新しいブログの記事を自動で投稿したい</h1>
+<p>ほとんど見られることがないブログとは知りつつも，更新したことすら知られることがないのは虚しいので，Twitter で更新したことを投稿するくらいは許されるだろうと思いました。ただ，毎回ツイートするのは面倒なので自動化したい。でもどうやるの？ということでこの記事に作業の記録を残します。</p>
+<h2 id="twitterapi-の申請">TwitterAPI の申請</h2>
+<p>このサイトで誘導されるがままに申請したら5分くらいで手続きが終わりました。</p>
+<p><a href="https://developer.twitter.com/en/docs/twitter-api">Twitter API</a></p>
+<h2 id="twitterapi-の設定">TwitterAPI の設定</h2>
+<p>設定に少し手間取ったので，注意事項を残しておきます。</p>
+<h3 id="v11-ではなく-v2-を使うこと">v1.1 ではなく v2 を使うこと</h3>
+<p>v1.1 は Elavated access を有効にしないと使えません。v2 では Essential access を使えます（デフォルトで有効）。手間が多少増えるので，v2 を使っておくのが無難でしょう。</p>
+<h3 id="公式のドキュメントを読むこと">公式のドキュメントを読むこと</h3>
+<p>v1.1 と v2 では使用が大きく異なります。ググって出てきた技術系のブログを参考にして OAuth の設定をすると，バージョンが違ってエラー吐かれまくります。改めてどんなサービスでも公式の docs を読んだ方がいいということを実感しました。</p>
+<h3 id="authentication-の設定任意">Authentication の設定(任意)</h3>
+<p>デフォルトでは<code>GET</code>メソッドしか許可されていません。Dash BoardでUser authentication settingsを変更することで<code>POST</code>メソッドが許可されます。</p>
+<h2 id="hugo-の仕様">HUGO の仕様</h2>
+<p>自分の場合は，次のような順序で記事を作成します:</p>
+<ol>
+<li><code>hugo new article/[name].md</code>で記事のテンプレート<code>content/article/[name].md</code>を作成</li>
+<li><code>content/article/name.md</code>にマークダウンで記事を書く</li>
+<li><code>hugo</code>で記事をコンパイルし<code>docs/article/[name]/index.html</code>を作成</li>
+<li>リモートリポジトリに<code>push</code></li>
+</ol>
+<p>なお，3 と 4 についてはシェルスクリプトで既に自動化しています。</p>
+<h2 id="ogp-の設定">OGP の設定</h2>
+<p>OGP とは，Open Graph Protcol の略で，SNS 上でリンクが共有されたときに表示されるカードの設定として使われるプロトコルです。このサイトで使用しているテーマでは，次のような設定でした。</p>
+<pre tabindex="0"><code>&lt;meta property=&#34;og:title&#34; content=&#34;{{ .Scratch.Get &#34;title&#34; }}&#34;&gt;
+&lt;meta property=&#34;og:description&#34; content=&#34;{{ .Scratch.Get &#34;description&#34; }}&#34;&gt;
+&lt;meta property=&#34;og:image&#34; content=&#34;{{ .Scratch.Get &#34;image&#34; | absURL }}&#34;&gt;
+&lt;meta property=&#34;og:url&#34; content=&#34;{{ .Permalink | absURL }}&#34;&gt;
+&lt;meta property=&#34;og:site_name&#34; content=&#34;{{ .Site.Title }}&#34;&gt;
+{{- if .IsPage }}
+&lt;meta property=&#34;og:type&#34; content=&#34;article&#34;&gt;
+{{- else -}}
+&lt;meta property=&#34;og:type&#34; content=&#34;website&#34;&gt;
+{{- end }}
+</code></pre><p>この<code>{{ }}</code>で囲まれたコードの部分にだいぶ苦しめられましたが，<code>themes/bilberry-hugo-theme/layouts/_default/baseof.html</code>と<code>config.toml</code>を編集してとりあえず正常に表示されるようになりました。</p>
+<h2 id="apiを利用するpythonスクリプト">APIを利用するpythonスクリプト</h2>
+<p>文字列の操作とか組み込みのメソッドが多くて楽ができるpythonを選択しました。</p>
+<ol>
+<li><code>git diff --name-only --cached --diff-filter=A</code>で新規のファイル名を取得</li>
+<li>記事のHTMLファイルの保存先の<code>docs</code>内のフォルダのみに絞り込む</li>
+<li>ファイル名でファイルを指定し，プラグインBeautifulSoup4を使って<code>&lt;title&gt;</code>タグ内の文字列（記事のタイトル）を取得</li>
+<li><code>tweepy</code>で記事名を投稿</li>
+</ol>
+<p>コードは次のとおりです</p>
+<pre tabindex="0"><code>import subprocess
+from subprocess import PIPE
+import bs4
+import re
+import tweepy
+import os
+from dotenv import load_dotenv
 
+def main():
+	new_article_arr = get_new_article_path_list()
+	if not len(new_article_arr):
+		print(&#34;Complite: No new article is detected&#34;)
+		return
+	for path in new_article_arr:
+		title = get_article_title(path)
+		print(&#34;New article title is&#34;, title)
+		api = make_api()
+		tweet_text = &#34;新しい記事を投稿しました:\n&#34; + title + &#34;\n&#34;
+		result = api.create_tweet(text=text)
+		print(result)
+	return
+
+def convert_title(string):
+	string = re.sub(&#39;\n&#39;, &#39;&#39;, string)
+	string = re.sub(&#39;\s&#39;, &#39;&#39;, string)
+	string = string.replace(&#34;&amp;vert&#34;, &#34;|&#34;)
+	return string
+
+def get_new_article_path_list():
+	COMMAND = &#34;git diff --name-only --cached --diff-filter=A&#34;
+	process = subprocess.run(COMMAND, shell=True, stdout=PIPE, stderr=PIPE, text=True)
+	path_text = process.stdout
+	path_arr = path_text.split(&#34;\n&#34;)[:-1]
+	path_arr_of_new_article = list(
+		filter(
+			lambda path: path.startswith(&#34;docs/article&#34;),
+			path_arr
+		))
+	return path_arr_of_new_article
+
+def get_article_title(path):
+	soup = bs4.BeautifulSoup(open(path), &#34;html.parser&#34;)
+	title = convert_title(soup.title.string)
+	return title
+
+def make_api():
+	API_KEY = os.environ[&#34;TWITTER_API_KEY&#34;]
+	API_KEY_SECRET = os.environ[&#34;TWITTER_API_KEY_SECRET&#34;]
+	ACCESS_TOKEN = os.environ[&#34;TWITTER_API_ACCESS_TOKEN&#34;]
+	ACCESS_TOKEN_SECRET = os.environ[&#34;TWITTER_API_ACCESS_TOKEN_SECRET&#34;]
+
+	client = tweepy.Client(
+		consumer_key=API_KEY,
+		consumer_secret=API_KEY_SECRET,
+		access_token=ACCESS_TOKEN,
+		access_token_secret=ACCESS_TOKEN_SECRET
+	)
+	return client
+
+if __name__ == &#34;__main__&#34;:
+	load_dotenv()
+	main()
+</code></pre>
     
 </div>
 
