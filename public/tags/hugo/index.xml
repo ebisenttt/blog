@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/tags/hugo/</link>
+    <description>Recent content in hugo on ebisen blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 30 Aug 2020 17:01:12 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugoで作ったブログ記事をGithubにdeployする</title>
+      <link>https://ebisenttt.github.io/blog/article/hugo-tips/</link>
+      <pubDate>Sun, 30 Aug 2020 17:01:12 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/hugo-tips/</guid>
+      <description>はじめに このブログの記事作成の際は，Hugoで書いた記事をGithubPagesにデプロイしています。書いてからデプロイする作業が多少面倒だったので，これを簡単にする手順をまとめてみます。
+これまでの手順 hugoで記事作成ができたら，下の手順を踏んでいました。
+hugo で.mdファイルから.htmlファイルを生成し，
+git add . で記事の&amp;rsquo;.md&amp;rsquo;ファイルをインデックスに追加し，
+git commit -m &amp;#34;メモ&amp;#34; でインデックスのファイルをローカルリポジトリにコミットし，
+git push origin master でローカルリポジトリをリモートリポジトリのmasterブランチにpush する。
+こんな感じです。毎回タイプするのが以外と面倒。最初のhugoを忘れてしまうことがあります。また，ちょっとした修正をしたいだけのときは特に面倒です。
+簡単にした手順 deploy.shというファイルを作業ディレクトリ直下に作っておいて，上の4つの手順をこのファイルに予め書いておきます。ファイルの中身は下の通りです。
+今回は，hugoで生成されたhtmlファイルのみをpushしたいので，cd docsとしています。
+#!/bin/bash1 echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Build the project. hugo # if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;` # Go To Public folder cd docs # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos.</description>
+    </item>
+    
+  </channel>
+</rss>

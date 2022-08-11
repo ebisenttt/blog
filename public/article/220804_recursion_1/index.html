@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Recursionの有料会員になってみた // ebisen blog</title>
+    <link rel="icon" href="favicon-32x32.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ebisenttt" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://ebisenttt.github.io/blog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ebisenttt.github.io/blog/icon.png"/>
+
+<meta name="twitter:title" content="Recursionの有料会員になってみた"/>
+<meta name="twitter:description" content="Recursion の有料会員になってみたので，継続的に感想を書いていこうと思います
+Recursion とは Facebook のエンジニアの方が運営している CS（Computer Science）を学習するためのサイトです。
+Recursion
+Recursion を始めようと思った理由 おすすめしているサイトが多い プログラミングの学習に関するサイトや Twitter なんかで最近よく目にするため，ずっと気になってはいました。
+利用者同士でのチーム開発 一番気になったのは利用者同士でのチーム開発を行えるということです。私の周りに「一緒に Web アプリ作ろう！」なんて言える人はいないし，職場でも多少はコードを書きますが，チームでの開発をしたことがありません（そもそも書ける人が自分以外に 1 人しかいない）。そのため，とりあえず動くアプリは作れても，可読性を意識した綺麗なコードを書くといったことは苦手です。実際に，数ヶ月前に書いたものを見返すと「なんでこんな書き方してんの？」となることもしばしば。人に見られることを前提にするという環境を体験することでこの辺を解決するきっかけにしたいと考えました。エンジニアの方にコードレビューしてもらえるということは私にとって大きい魅力でした。
+とりあえず数時間触ってみた感想 触ってみた感じ，Progate よりも難しく，CS50 よりも簡単って感じです。
+Progate
+CS50
+Progate は「とりあえず書けるようなになろう」というコンセプトだと感じ，CS50 は「基礎的なバックグラウンドをおさえた上でコーディングできるようになろう」というコンセプトであるように感じました。CS50 も Recursion も ComputerScience の看板を掲げているだけあって， C 言語でメモリの話になり，その後 python でアルゴリズムの話になってという流れで進んでいきます。Recursion の方が日本語で学習できること，コードが正しいか否かというフィードバックが速く細かいこと（CS50 は大学の講義ということもあり，90 分程度の講義の後に課題がでるという形式です）から，日本人の初学者にとっては学習しやすいかなーと思います。一方で，CS50 は修了証明書の発行を除けば無料ですが，Rucursion は有料（月あたり 61 米ドル）なので，費用面では CS50 が優れているかもしれません。ただし，CS50 で学習できないことが Recursion では学習できたりします。例えばフレームワークの使い方とか。
+今後の見通し 引き続きポートフォリオ制作を進めながら，Recursion でのチーム開発に必要な最低条件を優先的に満たしていこうと思います。進捗はまたこのブログに書きます。"/>
+
+    <meta property="og:title" content="Recursionの有料会員になってみた" />
+<meta property="og:description" content="Recursion の有料会員になってみたので，継続的に感想を書いていこうと思います
+Recursion とは Facebook のエンジニアの方が運営している CS（Computer Science）を学習するためのサイトです。
+Recursion
+Recursion を始めようと思った理由 おすすめしているサイトが多い プログラミングの学習に関するサイトや Twitter なんかで最近よく目にするため，ずっと気になってはいました。
+利用者同士でのチーム開発 一番気になったのは利用者同士でのチーム開発を行えるということです。私の周りに「一緒に Web アプリ作ろう！」なんて言える人はいないし，職場でも多少はコードを書きますが，チームでの開発をしたことがありません（そもそも書ける人が自分以外に 1 人しかいない）。そのため，とりあえず動くアプリは作れても，可読性を意識した綺麗なコードを書くといったことは苦手です。実際に，数ヶ月前に書いたものを見返すと「なんでこんな書き方してんの？」となることもしばしば。人に見られることを前提にするという環境を体験することでこの辺を解決するきっかけにしたいと考えました。エンジニアの方にコードレビューしてもらえるということは私にとって大きい魅力でした。
+とりあえず数時間触ってみた感想 触ってみた感じ，Progate よりも難しく，CS50 よりも簡単って感じです。
+Progate
+CS50
+Progate は「とりあえず書けるようなになろう」というコンセプトだと感じ，CS50 は「基礎的なバックグラウンドをおさえた上でコーディングできるようになろう」というコンセプトであるように感じました。CS50 も Recursion も ComputerScience の看板を掲げているだけあって， C 言語でメモリの話になり，その後 python でアルゴリズムの話になってという流れで進んでいきます。Recursion の方が日本語で学習できること，コードが正しいか否かというフィードバックが速く細かいこと（CS50 は大学の講義ということもあり，90 分程度の講義の後に課題がでるという形式です）から，日本人の初学者にとっては学習しやすいかなーと思います。一方で，CS50 は修了証明書の発行を除けば無料ですが，Rucursion は有料（月あたり 61 米ドル）なので，費用面では CS50 が優れているかもしれません。ただし，CS50 で学習できないことが Recursion では学習できたりします。例えばフレームワークの使い方とか。
+今後の見通し 引き続きポートフォリオ制作を進めながら，Recursion でのチーム開発に必要な最低条件を優先的に満たしていこうと思います。進捗はまたこのブログに書きます。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ebisenttt.github.io/blog/article/220804_recursion_1/" /><meta property="og:image" content="https://ebisenttt.github.io/blog/icon.png"/><meta property="article:section" content="article" />
+<meta property="article:published_time" content="2022-08-04T16:20:47+09:00" />
+<meta property="article:modified_time" content="2022-08-04T16:20:47+09:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://ebisenttt.github.io/blog"><img class="app-header-avatar" src="/blog/icon.png" alt="ebisenttt" /></a>
+      <h1>ebisen blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/blog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/about/">About</a>
+      </nav>
+      <p>プログラミング初学者による備忘録</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Recursionの有料会員になってみた</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 4, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://ebisenttt.github.io/blog/tags/recursion/">Recursion</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Recursion の有料会員になってみたので，継続的に感想を書いていこうと思います</p>
+<h2 id="recursion-とは">Recursion とは</h2>
+<p>Facebook のエンジニアの方が運営している CS（Computer Science）を学習するためのサイトです。</p>
+<p><a href="https://recursionist.io">Recursion</a></p>
+<h2 id="recursion-を始めようと思った理由">Recursion を始めようと思った理由</h2>
+<h3 id="おすすめしているサイトが多い">おすすめしているサイトが多い</h3>
+<p>プログラミングの学習に関するサイトや Twitter なんかで最近よく目にするため，ずっと気になってはいました。</p>
+<h3 id="利用者同士でのチーム開発">利用者同士でのチーム開発</h3>
+<p>一番気になったのは利用者同士でのチーム開発を行えるということです。私の周りに「一緒に Web アプリ作ろう！」なんて言える人はいないし，職場でも多少はコードを書きますが，チームでの開発をしたことがありません（そもそも書ける人が自分以外に 1 人しかいない）。そのため，とりあえず動くアプリは作れても，可読性を意識した綺麗なコードを書くといったことは苦手です。実際に，数ヶ月前に書いたものを見返すと「なんでこんな書き方してんの？」となることもしばしば。人に見られることを前提にするという環境を体験することでこの辺を解決するきっかけにしたいと考えました。エンジニアの方にコードレビューしてもらえるということは私にとって大きい魅力でした。</p>
+<h3 id="とりあえず数時間触ってみた感想">とりあえず数時間触ってみた感想</h3>
+<p>触ってみた感じ，Progate よりも難しく，CS50 よりも簡単って感じです。</p>
+<p><a href="https://prog-8.com">Progate</a></p>
+<p><a href="https://cs50.jp">CS50</a></p>
+<p>Progate は「とりあえず書けるようなになろう」というコンセプトだと感じ，CS50 は「基礎的なバックグラウンドをおさえた上でコーディングできるようになろう」というコンセプトであるように感じました。CS50 も Recursion も ComputerScience の看板を掲げているだけあって， C 言語でメモリの話になり，その後 python でアルゴリズムの話になってという流れで進んでいきます。Recursion の方が日本語で学習できること，コードが正しいか否かというフィードバックが速く細かいこと（CS50 は大学の講義ということもあり，90 分程度の講義の後に課題がでるという形式です）から，日本人の初学者にとっては学習しやすいかなーと思います。一方で，CS50 は修了証明書の発行を除けば無料ですが，Rucursion は有料（月あたり 61 米ドル）なので，費用面では CS50 が優れているかもしれません。ただし，CS50 で学習できないことが Recursion では学習できたりします。例えばフレームワークの使い方とか。</p>
+<h2 id="今後の見通し">今後の見通し</h2>
+<p>引き続きポートフォリオ制作を進めながら，Recursion でのチーム開発に必要な最低条件を優先的に満たしていこうと思います。進捗はまたこのブログに書きます。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

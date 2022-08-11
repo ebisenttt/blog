@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ruby on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/categories/ruby/</link>
+    <description>Recent content in ruby on ebisen blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 Mar 2021 14:29:08 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/categories/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2章 | 初学者によるRuby on Rails Tutorial学習記録</title>
+      <link>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/</link>
+      <pubDate>Sat, 06 Mar 2021 14:29:08 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/</guid>
+      <description>この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。 はじめに | 初学者によるRuby on Rails Tutorial学習記録
+2章の所感 2章では，データベースやherokuを使います。この辺の連携や認証でかなりつまずいてしまいました…。
+データベースをmysqlへ Ruby on Rails Tutorialでは，データベースにPostgreSQLを使っていますが，複数の記事でMySQLが推奨されていることや，職場でもMySQLが使用されていることから，MySQLを使用することにしました。
+Gemfile 削除するgem sqlite3 pg 追加するgem mysql2 Gemfileを編集したら bundle install bundle update します。
+mysqlでデータベースを作成 mysql -u root -p //まずはroot権限でログイン パスワードを要求されるので，何も入力せずにEnter。初期設定ではパスワードが設定されていません。
+create database toy_app; データベースのテーブルやらなんやらは教材の指示に従えばOKです。
+config/database.ymlの設定 この辺から私にはややこしかったです。config/database.ymlを書き換えます。ここには，データベースに関する設定が書かれています。どこまで信用できるかはわかりませんが，私の設定を書いてみます。
+default: &amp;amp;default adapter: mysql2 encoding: utf8 reconnect: false pool: 5 timeout: 5000 development: &amp;lt;&amp;lt;: *default database: toy_app //さっき設定したdatabase名 user: root password: test: //まだtestは使わないのでとりあえずこの状態で &amp;lt;&amp;lt;: *default production: &amp;lt;&amp;lt;: *default url: &amp;lt;%= ENV[&amp;#39;DATABASE_URL&amp;#39;] %&amp;gt; //これ以降になにが書いてるかは後でわかります database: &amp;lt;%= ENV[&amp;#39;DB_NAME&amp;#39;] %&amp;gt; user: &amp;lt;%= ENV[&amp;#39;DB_USER&amp;#39;] %&amp;gt; password: &amp;lt;%= ENV[&amp;#39;DB_PASSWORD&amp;#39;] %&amp;gt; default, development, test, productionの4つに別れていて，開発中に使う設定はdevelopmentに，herokuにアップロードした後の本番環境で使う設定はproductionに書いてあります。testはこの時点ではあまり気にする必要がありません。defaultは全てに共通して設定したい項目です。</description>
+    </item>
+    
+  </channel>
+</rss>
