@@ -4,6 +4,8 @@ title = "ebisen blog"
 baseURL = "https://ebisenttt.github.io/blog"
 publishDir = "docs"
 theme = "bilberry-hugo-theme"
+# 絶対パスでの参照
+canonifyurls = true
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
@@ -22,11 +24,19 @@ summaryLength = 120
 googleAnalytics = "UA-177822678-1"
 
 # Enable / Disable comments on the articles via Disqus.
-disqusShortname = "ebisenttt"
+disqusShortname = "ebisen blog"
 
 # Enable / Disable open link with a new tab.
 [blackfriday]
   hrefTargetBlank = false
+
+#Static files
+	staticDir = ['static']
+
+[author]
+	name="ebisenttt"
+	location="Saitama, Japan"
+	picture="/icon.png"
 
 [params]
   # Custom CSS / JS modules that will be imported by the template.
@@ -52,8 +62,8 @@ disqusShortname = "ebisenttt"
   algolia_appId     = "45CEN6X6AT"
   algolia_apiKey    = "16030625f1a4d0dd3b8aefd794fd4cf1"
   algolia_indexName = "bilberry-hugo-theme"
-    # Set this option to false if you want to search within all articles in all languages at once
-    algolia_currentLanguageOnly = true
+	# Set this option to false if you want to search within all articles in all languages at once
+	algolia_currentLanguageOnly = true
 
   # Enable / Disable comments on the articles via commento
   commentoJsURL = ""
@@ -69,10 +79,10 @@ disqusShortname = "ebisenttt"
     subtitle = "プログラミング初学者の備忘録"
 
     # if you want to use libravatar or gravatar for the header image
-    avatarEmail = ""
+    gravatarEMail = "vamos.nippon.2010@gmail.com"
 
     # set an path to the image file you want to use | overwrites avatar by email
-    customImage = "icon.png"
+    customImage = ""
 
     # define the icon you want to use for the overlay for the customImage or avatar.
     overlayIcon = "fa-home"

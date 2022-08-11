@@ -1,1 +1,4 @@
 /content
+/deploy.sh
+/tweetNewArticle.py
+/.*

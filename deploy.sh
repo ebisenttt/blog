@@ -10,6 +10,9 @@ cd docs
 # Add changes to git.
 git add .
 
+## Tweet Article title
+python3 tweetNewArticle.py
+
 # Commit changes.
 msg="rebuilding site `date`"
 if [ $# -eq 1 ]
