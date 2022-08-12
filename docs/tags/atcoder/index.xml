@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>atcoder on ebisen blog</title>
+    <title>AtCoder on ebisen blog</title>
     <link>https://ebisenttt.github.io/blog/tags/atcoder/</link>
-    <description>Recent content in atcoder on ebisen blog</description>
+    <description>Recent content in AtCoder on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-JP</language>
+    <language>ja-jp</language>
     <lastBuildDate>Sun, 30 Aug 2020 17:47:26 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>200829の学習</title>
-      <link>https://ebisenttt.github.io/blog/article/200829/</link>
+      <link>https://ebisenttt.github.io/blog/posts/200829/</link>
       <pubDate>Sun, 30 Aug 2020 17:47:26 +0900</pubDate>
       
-      <guid>https://ebisenttt.github.io/blog/article/200829/</guid>
-      <description>この日は午前中は仕事だったので，夕方くらいから作業開始でした。週末なので，アルゴリズム別にAtCoderの過去問演習をしました。夜は外出したので量は多くないです。 A - 2点間距離の最大値 ( The longest distance ) 灰diffなのでなんなくAC B - Sum of Three Integers TLE</description>
+      <guid>https://ebisenttt.github.io/blog/posts/200829/</guid>
+      <description>この日は午前中は仕事だったので，夕方くらいから作業開始でした。週末なので，アルゴリズム別にAtCoderの過去問演習をしました。夜は外出したので量は多くないです。
+A - 2点間距離の最大値 ( The longest distance ) 灰diffなのでなんなくAC
+B - Sum of Three Integers TLEを避けるために3重ループでなく，2重ループにしました。この工夫は以前もやったことがあったので大丈夫。数学でもこの手法で2元1次連立方程式に持ち込んだりしますね。
+C - Otoshidama この問題は以前も解いたことがありました。これも1つ前の問題と同じような工夫で解けました。
+A - Don&amp;rsquo;t be late 整数の割り算が切り捨てになることに注意しました。</description>
     </item>
     
   </channel>

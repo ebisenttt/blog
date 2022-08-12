@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ja-jp">
+  <head>
+    <title>1章 | 初学者によるRuby on Rails Tutorial学習記録 // ebisen blog</title>
+    <link rel="icon" href="favicon-32x32.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ebisenttt" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://ebisenttt.github.io/blog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ebisenttt.github.io/blog/icon.png"/>
+
+<meta name="twitter:title" content="1章 | 初学者によるRuby on Rails Tutorial学習記録"/>
+<meta name="twitter:description" content="この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。 はじめに | 初学者によるRuby on Rails Tutorial学習記録
+1章の所感 1章については，まだつまずくことが少なかったです。Gemfileがまだブラックボックス化しているため，学習中に私が気になった点を一部補足しておきます。
+Gemfile バージョン指定 Gemfileは使用するgemの種類やバージョンを使用するために作成するファイルです。その中で使用する&gt;=や~&gt;という記号について補足します。
+バージョンの表記方法について まず，RubyやRailsに限らず，ソフトウェアのバージョンは
+(メジャーバージョン).（マイナーバージョン）.（パッチバージョン） の形式で表記します。例えば，1.2.3というバージョンは，メジャーバージョンが1, マイナーバージョンが2, パッチバージョンが3であるバージョンを表します。 なお，メジャーバージョンは大きなアップデート，マイナーバージョンは小さなアップデート，パッチバージョンはバグの修正等があったときに更新されます。
+&gt;= 例えば
+gem &#39;sample&#39;, &#39;&gt;= 1.2.3&#39; はsampleというgemの1.2.3以上のバージョンを指定しています。つまり，存在するバージョンのうち1.2.3以降の最も新しいバージョン（例えば1.2.4や1.3.0など）が使用されます。
+~&gt; 例えば
+gem &#39;sample&#39;, &#39;~&gt; 1.2.3&#39; はsampleというgemのメジャーバージョンが1でマイナーバージョンが2以上のバージョン（例えば1.3.2など）を指定します。逆に言えば，メジャーバージョンが新しいもの（例えば2.1.3など）は使用されません。
+bundle まずbundleとは，gemの依存関係（例えばgemAを使うにはgemBが必要というような関係）を管理するためのものです。ややこしいのはbundle自身もgemであるということです。様々なgemを使うにあたり，bundleがない状態では他のgemを管理できないため，まずは
+gem install bundle でbundleをインストールします。その後，bundle以外の使いたいgemをGemfileに記述し，
+bundle install でインストールします。
+GemfileとGemfile.lock 作成したアプリケーションのディレクトリ直下にGemfileとGemfile.lockというファイルがあるはずです。これらの役割について補足します。まず，Gemfileは（前述の通り），作成するアプリケーションに使用したいgemの種類とバージョンを人間が記述するためのファイルです。一方でGemfile.lockは，作成するアプリケーションに使用したいgemの種類とバージョン，その依存関係をbundleがメモしておくためのファイルです。したがって，基本的には人間がGemfileを編集することはあっても，Gemfile.lockを編集することはありません。Gemfile.lockを更新する際は，
+bundle update とします。 これまでの内容をまとめると，まず
+gem install bundle \\bundleがインストールされる 次にGemfileを編集し，
+bundle install \\Gemfileの内容に応じてgemがインストールされる bundle update \\Gemfileの内容に応じてGemfile.lockが更新される という流れです。"/>
+
+    <meta property="og:title" content="1章 | 初学者によるRuby on Rails Tutorial学習記録" />
+<meta property="og:description" content="この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。 はじめに | 初学者によるRuby on Rails Tutorial学習記録
+1章の所感 1章については，まだつまずくことが少なかったです。Gemfileがまだブラックボックス化しているため，学習中に私が気になった点を一部補足しておきます。
+Gemfile バージョン指定 Gemfileは使用するgemの種類やバージョンを使用するために作成するファイルです。その中で使用する&gt;=や~&gt;という記号について補足します。
+バージョンの表記方法について まず，RubyやRailsに限らず，ソフトウェアのバージョンは
+(メジャーバージョン).（マイナーバージョン）.（パッチバージョン） の形式で表記します。例えば，1.2.3というバージョンは，メジャーバージョンが1, マイナーバージョンが2, パッチバージョンが3であるバージョンを表します。 なお，メジャーバージョンは大きなアップデート，マイナーバージョンは小さなアップデート，パッチバージョンはバグの修正等があったときに更新されます。
+&gt;= 例えば
+gem &#39;sample&#39;, &#39;&gt;= 1.2.3&#39; はsampleというgemの1.2.3以上のバージョンを指定しています。つまり，存在するバージョンのうち1.2.3以降の最も新しいバージョン（例えば1.2.4や1.3.0など）が使用されます。
+~&gt; 例えば
+gem &#39;sample&#39;, &#39;~&gt; 1.2.3&#39; はsampleというgemのメジャーバージョンが1でマイナーバージョンが2以上のバージョン（例えば1.3.2など）を指定します。逆に言えば，メジャーバージョンが新しいもの（例えば2.1.3など）は使用されません。
+bundle まずbundleとは，gemの依存関係（例えばgemAを使うにはgemBが必要というような関係）を管理するためのものです。ややこしいのはbundle自身もgemであるということです。様々なgemを使うにあたり，bundleがない状態では他のgemを管理できないため，まずは
+gem install bundle でbundleをインストールします。その後，bundle以外の使いたいgemをGemfileに記述し，
+bundle install でインストールします。
+GemfileとGemfile.lock 作成したアプリケーションのディレクトリ直下にGemfileとGemfile.lockというファイルがあるはずです。これらの役割について補足します。まず，Gemfileは（前述の通り），作成するアプリケーションに使用したいgemの種類とバージョンを人間が記述するためのファイルです。一方でGemfile.lockは，作成するアプリケーションに使用したいgemの種類とバージョン，その依存関係をbundleがメモしておくためのファイルです。したがって，基本的には人間がGemfileを編集することはあっても，Gemfile.lockを編集することはありません。Gemfile.lockを更新する際は，
+bundle update とします。 これまでの内容をまとめると，まず
+gem install bundle \\bundleがインストールされる 次にGemfileを編集し，
+bundle install \\Gemfileの内容に応じてgemがインストールされる bundle update \\Gemfileの内容に応じてGemfile.lockが更新される という流れです。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ebisenttt.github.io/blog/posts/ruby_on_rails_tutorial_1/" /><meta property="og:image" content="https://ebisenttt.github.io/blog/icon.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-03T18:00:57+09:00" />
+<meta property="article:modified_time" content="2021-03-03T18:00:57+09:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://ebisenttt.github.io/blog"><img class="app-header-avatar" src="/blog/icon.png" alt="ebisenttt" /></a>
+      <h1>ebisen blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/blog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/about/">About</a>
+      </nav>
+      <p>プログラミング初学者の備忘録</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">1章 | 初学者によるRuby on Rails Tutorial学習記録</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 3, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://ebisenttt.github.io/blog/tags/ruby/">ruby</a>
+              <a class="tag" href="https://ebisenttt.github.io/blog/tags/rails/">rails</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>この記事では，プログラミング初学者によるRuby on Rails Tutorial学習中のつまずきを章別に共有します。一覧は次のページに用意しています。
+<a href="https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/">はじめに | 初学者によるRuby on Rails Tutorial学習記録</a></p>
+<h1 id="1章の所感">1章の所感</h1>
+<p>1章については，まだつまずくことが少なかったです。Gemfileがまだブラックボックス化しているため，学習中に私が気になった点を一部補足しておきます。</p>
+<h1 id="gemfile">Gemfile</h1>
+<h2 id="バージョン指定">バージョン指定</h2>
+<p><code>Gemfile</code>は使用する<code>gem</code>の種類やバージョンを使用するために作成するファイルです。その中で使用する<code>&gt;=</code>や<code>~&gt;</code>という記号について補足します。</p>
+<h3 id="バージョンの表記方法について">バージョンの表記方法について</h3>
+<p>まず，RubyやRailsに限らず，ソフトウェアのバージョンは</p>
+<pre tabindex="0"><code>(メジャーバージョン).（マイナーバージョン）.（パッチバージョン）
+</code></pre><p>の形式で表記します。例えば，<code>1.2.3</code>というバージョンは，メジャーバージョンが1, マイナーバージョンが2, パッチバージョンが3であるバージョンを表します。
+なお，メジャーバージョンは大きなアップデート，マイナーバージョンは小さなアップデート，パッチバージョンはバグの修正等があったときに更新されます。</p>
+<h3 id="heading">&gt;=</h3>
+<p>例えば</p>
+<pre tabindex="0"><code>gem &#39;sample&#39;, &#39;&gt;= 1.2.3&#39;
+</code></pre><p>は<code>sample</code>という<code>gem</code>の<code>1.2.3</code>以上のバージョンを指定しています。つまり，存在するバージョンのうち<code>1.2.3</code>以降の最も新しいバージョン（例えば<code>1.2.4</code>や<code>1.3.0</code>など）が使用されます。</p>
+<h3 id="heading-1">~&gt;</h3>
+<p>例えば</p>
+<pre tabindex="0"><code>gem &#39;sample&#39;, &#39;~&gt; 1.2.3&#39;
+</code></pre><p>は<code>sample</code>という<code>gem</code>の<strong>メジャーバージョン</strong>が<code>1</code>で<strong>マイナーバージョン</strong>が<code>2</code><strong>以上</strong>のバージョン（例えば<code>1.3.2</code>など）を指定します。逆に言えば，メジャーバージョンが新しいもの（例えば<code>2.1.3</code>など）は使用されません。</p>
+<h2 id="bundle">bundle</h2>
+<p>まず<code>bundle</code>とは，<code>gem</code>の依存関係（例えば<code>gemA</code>を使うには<code>gemB</code>が必要というような関係）を管理するためのものです。ややこしいのは<code>bundle</code>自身も<code>gem</code>であるということです。様々な<code>gem</code>を使うにあたり，<code>bundle</code>がない状態では他の<code>gem</code>を管理できないため，まずは</p>
+<pre tabindex="0"><code>gem install bundle
+</code></pre><p>で<code>bundle</code>をインストールします。その後，<code>bundle</code>以外の使いたい<code>gem</code>を<code>Gemfile</code>に記述し，</p>
+<pre tabindex="0"><code>bundle install
+</code></pre><p>でインストールします。</p>
+<h2 id="gemfileとgemfilelock">GemfileとGemfile.lock</h2>
+<p>作成したアプリケーションのディレクトリ直下に<code>Gemfile</code>と<code>Gemfile.lock</code>というファイルがあるはずです。これらの役割について補足します。まず，<code>Gemfile</code>は（前述の通り），作成するアプリケーションに使用したい<code>gem</code>の種類とバージョンを<strong>人間が記述するため</strong>のファイルです。一方で<code>Gemfile.lock</code>は，作成するアプリケーションに使用したい<code>gem</code>の種類とバージョン，その依存関係を<strong>bundleがメモしておくための</strong>ファイルです。したがって，<strong>基本的には人間が<code>Gemfile</code>を編集することはあっても，<code>Gemfile.lock</code>を編集することはありません</strong>。<code>Gemfile.lock</code>を更新する際は，</p>
+<pre tabindex="0"><code>bundle update
+</code></pre><p>とします。
+これまでの内容をまとめると，まず</p>
+<pre tabindex="0"><code>gem install bundle \\bundleがインストールされる
+</code></pre><p>次に<code>Gemfile</code>を編集し，</p>
+<pre tabindex="0"><code>bundle install \\Gemfileの内容に応じてgemがインストールされる
+bundle update  \\Gemfileの内容に応じてGemfile.lockが更新される
+</code></pre><p>という流れです。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

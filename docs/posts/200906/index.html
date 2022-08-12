@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja-jp">
+  <head>
+    <title>200906の学習 // ebisen blog</title>
+    <link rel="icon" href="favicon-32x32.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ebisenttt" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://ebisenttt.github.io/blog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ebisenttt.github.io/blog/icon.png"/>
+
+<meta name="twitter:title" content="200906の学習"/>
+<meta name="twitter:description" content="AtCoder過去問演習 A - Darker and Darker 初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。
+C - 器物損壊！高橋君 前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想ができました。自力AC。
+C - One-stroke Path next_permutationの問題は何度か解いたことがありました。自力AC。
+VSCode環境整備 デバッグビュー F5でデバッグを始めると，以前はデバッグビューが自動で表示されましたが，最近は自動で表示されなくなっていました。
+Twitterで呟くとフォロワーさんから7月のVSCodeのアップデートが原因ではないかと助言を頂きました。
+公式ドキュメントを確認すると，最初のセッションが開始したときのみデバッグビューを表示するようにデフォルト設定が変更されたようでした。
+setting.jsonのdebug.openDebugを次のように修正したら元に戻りました。
+&#34;debug.openDebug&#34; : &#34;openOnSessionStart&#34; queueのデバッグ デバッグ時にC&#43;&#43;のコンテナクラス(vector, list, queueなど)の要素を表示させるためにVSCodeの拡張機能Code-lldbを使っています。(&lt;bits/stdc&#43;&#43;.h&gt;を使えなくなる代償を払い，コンパイラーをgccからclangに，デバッガーをgdbからlldbに変えてます…。いい方法があれば教えて下さい！！)
+しかし，最近BFSやDFSを実装できるようになり，queueの要素が表示されないことに気づきました。
+またsetting.jsonを見直してみると"/>
+
+    <meta property="og:title" content="200906の学習" />
+<meta property="og:description" content="AtCoder過去問演習 A - Darker and Darker 初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。
+C - 器物損壊！高橋君 前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想ができました。自力AC。
+C - One-stroke Path next_permutationの問題は何度か解いたことがありました。自力AC。
+VSCode環境整備 デバッグビュー F5でデバッグを始めると，以前はデバッグビューが自動で表示されましたが，最近は自動で表示されなくなっていました。
+Twitterで呟くとフォロワーさんから7月のVSCodeのアップデートが原因ではないかと助言を頂きました。
+公式ドキュメントを確認すると，最初のセッションが開始したときのみデバッグビューを表示するようにデフォルト設定が変更されたようでした。
+setting.jsonのdebug.openDebugを次のように修正したら元に戻りました。
+&#34;debug.openDebug&#34; : &#34;openOnSessionStart&#34; queueのデバッグ デバッグ時にC&#43;&#43;のコンテナクラス(vector, list, queueなど)の要素を表示させるためにVSCodeの拡張機能Code-lldbを使っています。(&lt;bits/stdc&#43;&#43;.h&gt;を使えなくなる代償を払い，コンパイラーをgccからclangに，デバッガーをgdbからlldbに変えてます…。いい方法があれば教えて下さい！！)
+しかし，最近BFSやDFSを実装できるようになり，queueの要素が表示されないことに気づきました。
+またsetting.jsonを見直してみると" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ebisenttt.github.io/blog/posts/200906/" /><meta property="og:image" content="https://ebisenttt.github.io/blog/icon.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-12T16:00:31+09:00" />
+<meta property="article:modified_time" content="2020-09-12T16:00:31+09:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://ebisenttt.github.io/blog"><img class="app-header-avatar" src="/blog/icon.png" alt="ebisenttt" /></a>
+      <h1>ebisen blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/blog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/about/">About</a>
+      </nav>
+      <p>プログラミング初学者の備忘録</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">200906の学習</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 12, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://ebisenttt.github.io/blog/tags/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/">今日の学習</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="atcoder過去問演習">AtCoder過去問演習</h2>
+<h3 id="a---darker-and-darkerhttpsatcoderjpcontestsagc033tasksagc033_a"><a href="https://atcoder.jp/contests/agc033/tasks/agc033_a">A - Darker and Darker</a></h3>
+<p>初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。</p>
+<h3 id="c---器物損壊高橋君httpsatcoderjpcontestsarc005tasksarc005_3"><a href="https://atcoder.jp/contests/arc005/tasks/arc005_3">C - 器物損壊！高橋君</a></h3>
+<p>前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想ができました。自力AC。</p>
+<h3 id="c---one-stroke-pathhttpsatcoderjpcontestsabc054tasksabc054_c"><a href="https://atcoder.jp/contests/abc054/tasks/abc054_c">C - One-stroke Path</a></h3>
+<p>next_permutationの問題は何度か解いたことがありました。自力AC。</p>
+<h2 id="vscode環境整備">VSCode環境整備</h2>
+<h3 id="デバッグビュー">デバッグビュー</h3>
+<p>F5でデバッグを始めると，以前はデバッグビューが自動で表示されましたが，最近は自動で表示されなくなっていました。</p>
+<p>Twitterで呟くとフォロワーさんから7月のVSCodeのアップデートが原因ではないかと助言を頂きました。</p>
+<p>公式ドキュメントを確認すると，最初のセッションが開始したときのみデバッグビューを表示するようにデフォルト設定が変更されたようでした。</p>
+<p><code>setting.json</code>の<code>debug.openDebug</code>を次のように修正したら元に戻りました。</p>
+<pre tabindex="0"><code>&#34;debug.openDebug&#34; : &#34;openOnSessionStart&#34;
+</code></pre><h3 id="queueのデバッグ"><code>queue</code>のデバッグ</h3>
+<p>デバッグ時にC++のコンテナクラス(<code>vector</code>, <code>list</code>, <code>queue</code>など)の要素を表示させるためにVSCodeの拡張機能<code>Code-lldb</code>を使っています。(<code>&lt;bits/stdc++.h&gt;</code>を使えなくなる代償を払い，コンパイラーを<code>gcc</code>から<code>clang</code>に，デバッガーを<code>gdb</code>から<code>lldb</code>に変えてます…。いい方法があれば教えて下さい！！)</p>
+<p>しかし，最近BFSやDFSを実装できるようになり，<code>queue</code>の要素が表示されないことに気づきました。</p>
+<p>また<code>setting.json</code>を見直してみると</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

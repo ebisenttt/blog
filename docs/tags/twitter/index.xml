@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twitter on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/tags/twitter/</link>
+    <description>Recent content in Twitter on ebisen blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 08 Aug 2022 17:11:26 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TwitterAPI で新しいブログの記事を自動で投稿したい</title>
+      <link>https://ebisenttt.github.io/blog/posts/20220808_tweetnewarticle/</link>
+      <pubDate>Mon, 08 Aug 2022 17:11:26 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/20220808_tweetnewarticle/</guid>
+      <description>ほとんど見られることがないブログとは知りつつも，更新したことすら知られることがないのは虚しいので，Twitter で更新したことを投稿するくらいは許されるだろうと思いました。ただ，毎回ツイートするのは面倒なので自動化したい。でもどうやるの？ということでこの記事に作業の記録を残します。
+TwitterAPI の申請 このサイトで誘導されるがままに申請したら5分くらいで手続きが終わりました。
+Twitter API
+TwitterAPI の設定 設定に少し手間取ったので，注意事項を残しておきます。
+v1.1 ではなく v2 を使うこと v1.1 は Elavated access を有効にしないと使えません。v2 では Essential access を使えます（デフォルトで有効）。手間が多少増えるので，v2 を使っておくのが無難でしょう。
+公式のドキュメントを読むこと v1.1 と v2 では使用が大きく異なります。ググって出てきた技術系のブログを参考にして OAuth の設定をすると，バージョンが違ってエラー吐かれまくります。改めてどんなサービスでも公式の docs を読んだ方がいいということを実感しました。
+Authentication の設定(任意) デフォルトではGETメソッドしか許可されていません。Dash BoardでUser authentication settingsを変更することでPOSTメソッドが許可されます。
+HUGO の仕様 自分の場合は，次のような順序で記事を作成します:
+hugo new article/[name].mdで記事のテンプレートcontent/article/[name].mdを作成 content/article/name.mdにマークダウンで記事を書く hugoで記事をコンパイルしdocs/article/[name]/index.htmlを作成 リモートリポジトリにpush なお，3 と 4 についてはシェルスクリプトで既に自動化しています。
+OGP の設定 OGP とは，Open Graph Protcol の略で，SNS 上でリンクが共有されたときに表示されるカードの設定として使われるプロトコルです。このサイトで使用しているテーマでは，次のような設定でした。
+&amp;lt;meta property=&amp;#34;og:title&amp;#34; content=&amp;#34;{{ .Scratch.Get &amp;#34;title&amp;#34; }}&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:description&amp;#34; content=&amp;#34;{{ .Scratch.Get &amp;#34;description&amp;#34; }}&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:image&amp;#34; content=&amp;#34;{{ .</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,82 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ebisenttt.github.io/blog/article/</loc>
-    <lastmod>2022-08-08T17:11:26+09:00</lastmod>
-  </url><url>
     <loc>https://ebisenttt.github.io/blog/</loc>
     <lastmod>2022-08-08T17:11:26+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/20220808_tweetnewarticle/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/</loc>
+    <lastmod>2022-08-08T17:11:26+09:00</lastmod>
+  </url><url>
+    <loc>https://ebisenttt.github.io/blog/tags/</loc>
+    <lastmod>2022-08-08T17:11:26+09:00</lastmod>
+  </url><url>
+    <loc>https://ebisenttt.github.io/blog/tags/twitter/</loc>
+    <lastmod>2022-08-08T17:11:26+09:00</lastmod>
+  </url><url>
+    <loc>https://ebisenttt.github.io/blog/posts/20220808_tweetnewarticle/</loc>
     <lastmod>2022-08-08T17:11:26+09:00</lastmod>
   </url><url>
     <loc>https://ebisenttt.github.io/blog/tags/recursion/</loc>
     <lastmod>2022-08-04T16:20:47+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/220804_recursion_1/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/220804_recursion_1/</loc>
     <lastmod>2022-08-04T16:20:47+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/tags/</loc>
-    <lastmod>2022-08-04T16:20:47+09:00</lastmod>
-  </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_2/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/ruby_on_rails_tutorial_2/</loc>
     <lastmod>2021-03-06T14:29:08+09:00</lastmod>
-  </url><url>
-    <loc>https://ebisenttt.github.io/blog/categories/</loc>
-    <lastmod>2021-03-06T14:29:08+09:00</lastmod>
-  </url><url>
-    <loc>https://ebisenttt.github.io/blog/categories/rails/</loc>
-    <lastmod>2021-03-06T14:29:08+09:00</lastmod>
-  </url><url>
-    <loc>https://ebisenttt.github.io/blog/categories/ruby/</loc>
-    <lastmod>2021-03-06T14:29:08+09:00</lastmod>
-  </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_1/</loc>
-    <lastmod>2021-03-03T18:00:57+09:00</lastmod>
   </url><url>
     <loc>https://ebisenttt.github.io/blog/tags/rails/</loc>
-    <lastmod>2021-03-03T18:00:57+09:00</lastmod>
+    <lastmod>2021-03-06T14:29:08+09:00</lastmod>
   </url><url>
     <loc>https://ebisenttt.github.io/blog/tags/ruby/</loc>
+    <lastmod>2021-03-06T14:29:08+09:00</lastmod>
+  </url><url>
+    <loc>https://ebisenttt.github.io/blog/posts/ruby_on_rails_tutorial_1/</loc>
     <lastmod>2021-03-03T18:00:57+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/ruby_on_rails_tutorial_0/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/ruby_on_rails_tutorial_0/</loc>
     <lastmod>2021-03-03T17:01:50+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/categories/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200912/</loc>
     <lastmod>2020-09-13T14:00:42+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200912/</loc>
+    <loc>https://ebisenttt.github.io/blog/tags/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/</loc>
     <lastmod>2020-09-13T14:00:42+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200911/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200911/</loc>
     <lastmod>2020-09-12T16:03:35+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200909/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200909/</loc>
     <lastmod>2020-09-12T16:03:07+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200908/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200908/</loc>
     <lastmod>2020-09-12T16:02:26+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200907/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200907/</loc>
     <lastmod>2020-09-12T16:01:17+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200906/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200906/</loc>
     <lastmod>2020-09-12T16:00:31+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200902/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200902/</loc>
     <lastmod>2020-09-04T06:05:50+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200901/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200901/</loc>
     <lastmod>2020-09-04T06:05:45+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200831/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200831/</loc>
     <lastmod>2020-09-04T06:05:31+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200830/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200830/</loc>
     <lastmod>2020-09-01T04:35:21+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/200829/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/200829/</loc>
     <lastmod>2020-08-30T17:47:26+09:00</lastmod>
   </url><url>
     <loc>https://ebisenttt.github.io/blog/tags/atcoder/</loc>
@@ -89,9 +83,11 @@
     <loc>https://ebisenttt.github.io/blog/tags/hugo/</loc>
     <lastmod>2020-08-30T17:01:12+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/article/hugo-tips/</loc>
+    <loc>https://ebisenttt.github.io/blog/posts/hugo-tips/</loc>
     <lastmod>2020-08-30T17:01:12+09:00</lastmod>
   </url><url>
-    <loc>https://ebisenttt.github.io/blog/author/</loc>
+    <loc>https://ebisenttt.github.io/blog/about/</loc>
+  </url><url>
+    <loc>https://ebisenttt.github.io/blog/categories/</loc>
   </url>
 </urlset>

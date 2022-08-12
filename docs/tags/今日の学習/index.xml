@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>今日の学習 on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/tags/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/</link>
+    <description>Recent content in 今日の学習 on ebisen blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 13 Sep 2020 14:00:42 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/tags/%E4%BB%8A%E6%97%A5%E3%81%AE%E5%AD%A6%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>200912の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200912/</link>
+      <pubDate>Sun, 13 Sep 2020 14:00:42 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200912/</guid>
+      <description>この日はAtCoderよりもブログの方に時間を使いました。
+AtCoder過去問演習 D - Islands War 区間計画法を知りませんでした。この発想は自分にはないです。解説AC。
+ブログ SEO対策 まずGoogle Analyticsに登録しました。参考にしたのは次のサイトです。 HUGOで行うGoogleアナリティクスの導入から設定方法の紹介
+このサイトはHugoで作っているのでconfig.tomlを書き換えるだけで簡単でした。
+次にGoogle Search Consoleに登録しました。こちらは特に調べずとも，このサイトのホームページのURLを登録し，HTMLファイルをブログのルートディレクトリに置くだけでできました。
+まだまだアクセスはありませんが，引き続き更新していきます。</description>
+    </item>
+    
+    <item>
+      <title>200911の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200911/</link>
+      <pubDate>Sat, 12 Sep 2020 16:03:35 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200911/</guid>
+      <description>この日はいつもより時間を作れました。
+AtCoder過去問 B - String Rotation queueを使ってfrontをpopしたりpushしたりして解きました。自力AC。
+B - Contest with Drinks Easy 全ての時間を足して，それぞれの時間を置き換えて出力を繰り返しました。自力AC。
+A - 閉路グラフ n個のノードの場合は1個飛ばしに消せば最大n/2のグラフに分けられます。サンプルケースが親切なのでn/2に気付けました。自力AC。
+B - ボウリングゲーム 空白なのか改行なのか，空白ならばいくつ出力するかというところを綺麗に書けず，結果coutを書きまくって対応しました。自力AC。
+A - たこ焼き買えるかな？ 端数が7個以上なら10個セットを買った方が安い。自力AC。</description>
+    </item>
+    
+    <item>
+      <title>200909の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200909/</link>
+      <pubDate>Sat, 12 Sep 2020 16:03:07 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200909/</guid>
+      <description>AtCoder過去問演習 A - Wanna go back home 場合分けが多かったので，できるだけシンプルに書きたいと思いましたが結局4つの場合に分けました。もっといい方法があるのか…。自力AC。</description>
+    </item>
+    
+    <item>
+      <title>200908の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200908/</link>
+      <pubDate>Sat, 12 Sep 2020 16:02:26 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200908/</guid>
+      <description>AtCoder過去問演習 B - AtCoDeerくんとボール色塗り Kをかけまくる問題。long longを使ったという点くらいです。自力AC。</description>
+    </item>
+    
+    <item>
+      <title>200907の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200907/</link>
+      <pubDate>Sat, 12 Sep 2020 16:01:17 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200907/</guid>
+      <description>AtCoder過去問演習 ###　D - カード並べ
+next_permutationを使いました。自力AC。
+###　A - おつり
+10円忘れてました笑。自力AC。
+phpとsql 業務で簡単な作業を頼まれたので初歩的なことから調べながらいじっていました。内容はエラーログを見て細かい修正をするだけです。Warningが出ているのでプログラムは動いてしまっていますが，時間がある時に修正して欲しいとのこと。 </description>
+    </item>
+    
+    <item>
+      <title>200906の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200906/</link>
+      <pubDate>Sat, 12 Sep 2020 16:00:31 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200906/</guid>
+      <description>AtCoder過去問演習 A - Darker and Darker 初期の黒マスを始点としてマンハッタン距離の最大値を出力する，回数を距離に置き換えるという発想がなかったです。解説AC。
+C - 器物損壊！高橋君 前問のおかげで塀を壊すことをコスト1の移動に置き換えるという発想ができました。自力AC。
+C - One-stroke Path next_permutationの問題は何度か解いたことがありました。自力AC。
+VSCode環境整備 デバッグビュー F5でデバッグを始めると，以前はデバッグビューが自動で表示されましたが，最近は自動で表示されなくなっていました。
+Twitterで呟くとフォロワーさんから7月のVSCodeのアップデートが原因ではないかと助言を頂きました。
+公式ドキュメントを確認すると，最初のセッションが開始したときのみデバッグビューを表示するようにデフォルト設定が変更されたようでした。
+setting.jsonのdebug.openDebugを次のように修正したら元に戻りました。
+&amp;#34;debug.openDebug&amp;#34; : &amp;#34;openOnSessionStart&amp;#34; queueのデバッグ デバッグ時にC++のコンテナクラス(vector, list, queueなど)の要素を表示させるためにVSCodeの拡張機能Code-lldbを使っています。(&amp;lt;bits/stdc++.h&amp;gt;を使えなくなる代償を払い，コンパイラーをgccからclangに，デバッガーをgdbからlldbに変えてます…。いい方法があれば教えて下さい！！)
+しかし，最近BFSやDFSを実装できるようになり，queueの要素が表示されないことに気づきました。
+またsetting.jsonを見直してみると</description>
+    </item>
+    
+    <item>
+      <title>200902</title>
+      <link>https://ebisenttt.github.io/blog/posts/200902/</link>
+      <pubDate>Fri, 04 Sep 2020 06:05:50 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200902/</guid>
+      <description>GoogleCalssroomの提出物を一括ダウンロードするプログラム作成 この日もGoogleAPIをいじってました。OAuthについてあまり知らなかったので認証周りで時間がかかってしまっています。
+まだ完成しておらず時間があるので手作業でやってしまおうかという話になりました。
+そもそもOAuthがなにをしているのかということに関しては下記のサイトをみました。
+一番分かりやすい OAuth の説明
+業務には実用しないかもしれませんが，せっかく書いたので完成させようとは思います。プログラムの詳細については個別の記事を書こうと思います。</description>
+    </item>
+    
+    <item>
+      <title>200901の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200901/</link>
+      <pubDate>Fri, 04 Sep 2020 06:05:45 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200901/</guid>
+      <description>Google Classroomへの自動投稿アプリ作成 今日はAtCoderの過去問演習ではなく，GAS(Google Apps Script)でGoogle APIを使ったアプリを作っていました。言語はJavaScriptです。あまりJavaScriptに触ったことはありませんでしたが，コールバック関数について少し勉強したくらいで，ほとんどC++で書いている時と考え方は変わりませんでした。
+ただ多くの変数や関数を管理するのは慣れない作業で手間取りました。
+このプログラムは毎日決まった時間にGoogleForm未提出者名を GoogleClassroomのストリームに投稿するものです。
+詳細については後日に単独の記事を作ろうと思います。
+&amp;lt;追記&amp;gt; 無事動きました！未提出者も0になりました。</description>
+    </item>
+    
+    <item>
+      <title>200831の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200831/</link>
+      <pubDate>Fri, 04 Sep 2020 06:05:31 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200831/</guid>
+      <description>この日もあまり量は多くないですね。平日の習慣を見直そうと思います。
+C - 100 to 105 C - Poll mapを使いました。各要素の個数を値として記録しましたが，値が最大の要素を出力する方法に悩みました。最終的には，最大値を記録しておいて，値が最大値に一致する要素を出力するループを回しました。もっといい方法ないのかな…。
+&amp;lt;追記&amp;gt;
+公式解説を見たところ，自分の解答とおおよそ同じでした。これが一般的な方法ということですかね。</description>
+    </item>
+    
+    <item>
+      <title>200829の学習</title>
+      <link>https://ebisenttt.github.io/blog/posts/200829/</link>
+      <pubDate>Sun, 30 Aug 2020 17:47:26 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/200829/</guid>
+      <description>この日は午前中は仕事だったので，夕方くらいから作業開始でした。週末なので，アルゴリズム別にAtCoderの過去問演習をしました。夜は外出したので量は多くないです。
+A - 2点間距離の最大値 ( The longest distance ) 灰diffなのでなんなくAC
+B - Sum of Three Integers TLEを避けるために3重ループでなく，2重ループにしました。この工夫は以前もやったことがあったので大丈夫。数学でもこの手法で2元1次連立方程式に持ち込んだりしますね。
+C - Otoshidama この問題は以前も解いたことがありました。これも1つ前の問題と同じような工夫で解けました。
+A - Don&amp;rsquo;t be late 整数の割り算が切り捨てになることに注意しました。</description>
+    </item>
+    
+  </channel>
+</rss>
