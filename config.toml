@@ -5,7 +5,7 @@ theme = "m10c"
 paginate = 8
 contentDir = "content"
 archetypesDir = "archetypes"
-publishDir = "public"
+publishDir = "docs"
 languageCode = "ja-jp"
 
 [menu]
