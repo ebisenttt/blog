@@ -3,7 +3,9 @@ title = "ebisen blog"
 themesDir = "themes"
 theme = "m10c"
 paginate = 8
-publishDir = "docs"
+contentDir = "content"
+archetypesDir = "archetypes"
+publishDir = "public"
 languageCode = "ja-jp"
 
 [menu]
