@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ebisen blog</title>
+    <link>https://ebisenttt.github.io/blog/posts/</link>
+    <description>Recent content in Posts on ebisen blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 08 Jan 2023 13:40:16 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugoの環境移行でつまづいた</title>
+      <link>https://ebisenttt.github.io/blog/posts/20230108_hugo_trans/</link>
+      <pubDate>Sun, 08 Jan 2023 13:40:16 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/20230108_hugo_trans/</guid>
+      <description>起きた問題 hugo serverをたたいてアクセスするも&amp;quot;Page not found&amp;quot;と表示される hugo new posts/hoge.mdをたたいても&amp;quot;Error: no existing content directory configred for this project&amp;quot;と表示され.mdファイルが作成されない 対処法 git submodule --init --recursiveを実行 config.tomlの以下の項目を設定 archetypesDir = &amp;#34;archetypes&amp;#34; publishDir = &amp;#34;public&amp;#34; contentDir = &amp;#34;content&amp;#34; ディレクトリarchetypesを作成 ディレクトリarchetypes内に下記のファイルdefault.mdを作成 --- title: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34; date: {{ .Date }} draft: true --- ディレクトリcontentを作成（またはディレクトリ名変更） ディレクトリpublicを作成（またはディレクトリ名変更） 補足 最後に更新してからアップデートが入っていたことと，MacBookAir2017からM2MacBookAirに変えて色々と環境が変わったことが原因かと予想していますが，本質的なことは調べてません。逆に以前の環境ではデフォルトのディレクトリ構成ではないのにconfig.tomlがちゃんと設定されていなくても動いていたのが謎。
+おまけ HugoがLive Reloadに対応していたことを知って快適になった。
+参考サイト Hugo ビルドエラー対応 found no layout file - infraya.work</description>
+    </item>
+    
+  </channel>
+</rss>

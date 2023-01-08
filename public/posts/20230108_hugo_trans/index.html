@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja-jp">
+  <head>
+    <title>Hugoの環境移行でつまづいた // ebisen blog</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.109.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ebisenttt" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://ebisenttt.github.io/blog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ebisenttt.github.io/blog/icon.png"/>
+
+<meta name="twitter:title" content="Hugoの環境移行でつまづいた"/>
+<meta name="twitter:description" content="起きた問題 hugo serverをたたいてアクセスするも&quot;Page not found&quot;と表示される hugo new posts/hoge.mdをたたいても&quot;Error: no existing content directory configred for this project&quot;と表示され.mdファイルが作成されない 対処法 git submodule --init --recursiveを実行 config.tomlの以下の項目を設定 archetypesDir = &#34;archetypes&#34; publishDir = &#34;public&#34; contentDir = &#34;content&#34; ディレクトリarchetypesを作成 ディレクトリarchetypes内に下記のファイルdefault.mdを作成 --- title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34; date: {{ .Date }} draft: true --- ディレクトリcontentを作成（またはディレクトリ名変更） ディレクトリpublicを作成（またはディレクトリ名変更） 補足 最後に更新してからアップデートが入っていたことと，MacBookAir2017からM2MacBookAirに変えて色々と環境が変わったことが原因かと予想していますが，本質的なことは調べてません。逆に以前の環境ではデフォルトのディレクトリ構成ではないのにconfig.tomlがちゃんと設定されていなくても動いていたのが謎。
+おまけ HugoがLive Reloadに対応していたことを知って快適になった。
+参考サイト Hugo ビルドエラー対応 found no layout file - infraya.work"/>
+
+    <meta property="og:title" content="Hugoの環境移行でつまづいた" />
+<meta property="og:description" content="起きた問題 hugo serverをたたいてアクセスするも&quot;Page not found&quot;と表示される hugo new posts/hoge.mdをたたいても&quot;Error: no existing content directory configred for this project&quot;と表示され.mdファイルが作成されない 対処法 git submodule --init --recursiveを実行 config.tomlの以下の項目を設定 archetypesDir = &#34;archetypes&#34; publishDir = &#34;public&#34; contentDir = &#34;content&#34; ディレクトリarchetypesを作成 ディレクトリarchetypes内に下記のファイルdefault.mdを作成 --- title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34; date: {{ .Date }} draft: true --- ディレクトリcontentを作成（またはディレクトリ名変更） ディレクトリpublicを作成（またはディレクトリ名変更） 補足 最後に更新してからアップデートが入っていたことと，MacBookAir2017からM2MacBookAirに変えて色々と環境が変わったことが原因かと予想していますが，本質的なことは調べてません。逆に以前の環境ではデフォルトのディレクトリ構成ではないのにconfig.tomlがちゃんと設定されていなくても動いていたのが謎。
+おまけ HugoがLive Reloadに対応していたことを知って快適になった。
+参考サイト Hugo ビルドエラー対応 found no layout file - infraya.work" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ebisenttt.github.io/blog/posts/20230108_hugo_trans/" /><meta property="og:image" content="https://ebisenttt.github.io/blog/icon.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-08T13:40:16+09:00" />
+<meta property="article:modified_time" content="2023-01-08T13:40:16+09:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://ebisenttt.github.io/blog"><img class="app-header-avatar" src="/blog/icon.png" alt="ebisenttt" /></a>
+      <h1>ebisen blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/blog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/about/">About</a>
+      </nav>
+      <p>プログラミング初学者の備忘録</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Hugoの環境移行でつまづいた</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 8, 2023
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="起きた問題">起きた問題</h2>
+<ul>
+<li><code>hugo server</code>をたたいてアクセスするも&quot;Page not found&quot;と表示される</li>
+<li><code>hugo new posts/hoge.md</code>をたたいても&quot;Error: no existing content directory configred for this project&quot;と表示され<code>.md</code>ファイルが作成されない</li>
+</ul>
+<h2 id="対処法">対処法</h2>
+<ol>
+<li><code>git submodule --init --recursive</code>を実行</li>
+<li><code>config.toml</code>の以下の項目を設定
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">archetypesDir</span> = <span style="color:#e6db74">&#34;archetypes&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">publishDir</span> = <span style="color:#e6db74">&#34;public&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">contentDir</span> = <span style="color:#e6db74">&#34;content&#34;</span>
+</span></span></code></pre></div></li>
+<li>ディレクトリ<code>archetypes</code>を作成</li>
+<li>ディレクトリ<code>archetypes</code>内に下記のファイル<code>default.md</code>を作成
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span> ---
+</span></span><span style="display:flex;"><span> title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
+</span></span><span style="display:flex;"><span> date: {{ .Date }}
+</span></span><span style="display:flex;"><span> draft: true
+</span></span><span style="display:flex;"><span> ---
+</span></span></code></pre></div></li>
+<li>ディレクトリ<code>content</code>を作成（またはディレクトリ名変更）</li>
+<li>ディレクトリ<code>public</code>を作成（またはディレクトリ名変更）</li>
+</ol>
+<h2 id="補足">補足</h2>
+<p>最後に更新してからアップデートが入っていたことと，MacBookAir2017からM2MacBookAirに変えて色々と環境が変わったことが原因かと予想していますが，本質的なことは調べてません。逆に以前の環境ではデフォルトのディレクトリ構成ではないのに<code>config.toml</code>がちゃんと設定されていなくても動いていたのが謎。</p>
+<h2 id="おまけ">おまけ</h2>
+<p>HugoがLive Reloadに対応していたことを知って快適になった。</p>
+<h2 id="参考サイト">参考サイト</h2>
+<p><a href="https://infraya.work/posts/hugo_mypage_git_clone_error/">Hugo ビルドエラー対応 found no layout file - infraya.work</a></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
