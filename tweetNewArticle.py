@@ -18,7 +18,7 @@ def main():
         api = make_api()
         tweet_text = "新しい記事を投稿しました:\n" + title + "\n"
         result = api.create_tweet(text=text)
-        print(result)
+        print("Result:", result)
     return
 
 

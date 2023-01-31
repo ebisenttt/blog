@@ -6,7 +6,24 @@
     <description>Recent content in Posts on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 08 Jan 2023 13:40:16 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Jan 2023 08:04:59 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UoPeopleの入学手続き</title>
+      <link>https://ebisenttt.github.io/blog/posts/uopeople_application/</link>
+      <pubDate>Tue, 31 Jan 2023 08:04:59 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/uopeople_application/</guid>
+      <description>UoPeopleのBachelor of CS degree programにApplyしたのでその記録を残しておく。
+手続き中によくわからなかったこと 次のことがよくわからないまま手続きを進めていた。あらかじめ知っておけば安心して手続きできたので，同じような状況にある人は参考にしてほしい。
+最初の２科目は自動で登録される 一番最初に登録される2科目は自動で登録される。自分の場合はDuollingo English Testの点数で英語の授業が免除されたので，UNIV1001とCS1101だった。色々履修の順番とか考えてはいたけど最初は選ばせてくれない。
+最初の２科目の単位が認められるまでは &amp;ldquo;a non degree seeking student&amp;rdquo; 入学手続きが一通り終わってポータルに&amp;quot;Courses taken as a non-degree seeking student&amp;quot;と表示された。「え，Bachelor degreeとりたいんだけど&amp;hellip;。」と思っていたが，最初の2科目を終えると&amp;quot;a dgree seeking student&amp;quot;となるようだ。
+学生用メールアドレスは &amp;ldquo;a degree seeking student&amp;rdquo; となってから発行される オンラインで学習するにあたって，いろいろ便利なツールがあるのでサブスクしようと思ったが，学生割引を受けるために必要な学生用メールアドレスが発行されるのは &amp;ldquo;a degree seeking student&amp;rdquo; になってからなので，少なくとも最初のTerm（9週間）は学生用メールアドレスがないまま授業を受けることになる。
+どの単位がどの授業の単位に移行されるのか?またそれはいつわかるのか? SophiaやCouseraの単位移行については情報が多いが，当然通常の大学のどの授業がUoPeopleのどの授業の単位に移行されるのかは情報がない。こればかりは，事務局次第としかいいようがない。「どの単位が移行を認められたか」については，書類を出して数日後にポータル上でわかる。「どの授業の単位に充当されたのか」については，&amp;ldquo;a degree seeking student&amp;rdquo; になってからわかるようだ。つまり，履修の計画をしたり，SophiaやCouseraを使って外部で先に単位を取ってしまうみたいなことは，&amp;ldquo;a degree seeking student&amp;rdquo; になってから行うことになる。
+単位移行の上限は90単位とあるが&amp;hellip; 日本の大学で学士と修士を取得したので，移行できそうな単位はかなり（90単位は優に超える）のだが，申請して認められたのは52単位だった。おそらくElectivesと一部のGeneral Educationの単位に移行されるのだろう。当然CSの授業は大学で受けていないのでここの部分は移行で賄えないということだと思う。どの授業に移行されるのかわかるのはまだ先なので，そのときにまた記録するつもり。
+便利だったツール 有志による単位移行の対応表 (Google Spreadsheet) UoPeopleの学生によるDiscord Groupで共有されている履修計画表
+BA Course Planner: https://bit.ly/BA_UoPeople_Planner CS Course Planner: https://bit.ly/CS_UoPeople_Planner HS Course Planner: https://bit.</description>
+    </item>
+    
     <item>
       <title>Hugoの環境移行でつまづいた</title>
       <link>https://ebisenttt.github.io/blog/posts/20230108_hugo_trans/</link>
