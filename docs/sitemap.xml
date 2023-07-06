@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ebisenttt.github.io/blog/</loc>
-    <lastmod>2023-01-31T08:04:59+09:00</lastmod>
+    <lastmod>2023-07-03T22:38:54+09:00</lastmod>
   </url><url>
     <loc>https://ebisenttt.github.io/blog/posts/</loc>
-    <lastmod>2023-01-31T08:04:59+09:00</lastmod>
+    <lastmod>2023-07-03T22:38:54+09:00</lastmod>
+  </url><url>
+    <loc>https://ebisenttt.github.io/blog/posts/20230703/</loc>
+    <lastmod>2023-07-03T22:38:54+09:00</lastmod>
   </url><url>
     <loc>https://ebisenttt.github.io/blog/posts/uopeople_application/</loc>
     <lastmod>2023-01-31T08:04:59+09:00</lastmod>
@@ -95,7 +98,5 @@
     <loc>https://ebisenttt.github.io/blog/about/</loc>
   </url><url>
     <loc>https://ebisenttt.github.io/blog/categories/</loc>
-  </url><url>
-    <loc>https://ebisenttt.github.io/blog/posts/20230703/</loc>
   </url>
 </urlset>

@@ -6,7 +6,22 @@
     <description>Recent content in Posts on ebisen blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 31 Jan 2023 08:04:59 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jul 2023 22:38:54 +0900</lastBuildDate><atom:link href="https://ebisenttt.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>またライフログを再開しようと思う</title>
+      <link>https://ebisenttt.github.io/blog/posts/20230703/</link>
+      <pubDate>Mon, 03 Jul 2023 22:38:54 +0900</pubDate>
+      
+      <guid>https://ebisenttt.github.io/blog/posts/20230703/</guid>
+      <description>ライフログを再開したい ここ最近生活が雑になっている気がする．夜はダラダラして寝るだけで朝も対して活動的ではない．ログを残して反省の材料にしたい．
+理由はこれだけではない．最近backspace.fmというpodcast番組のオフ会に参加した．以前から聞いている番組だし，メインキャストのドリキンさんのYouTubeチャンネルは毎日欠かさず見ている．
+感想としては．みんなすごくキラキラしていて活動的だった．それに印象的だったのは，オフ会の際の興味の方向がpodcastのキャストではなく，参加者と彼らが所有しているガジェットに向いているということだ．ファンミーティングではなく，まさにコミュニティのオフラインイベントだった．
+自分もこだわりをもって活動的にコンテンツを発信する側になりたいと思い，またこのブログを再開してみる．とりあえず7月中は80％の投稿率を目指してみる．
+直近のテーマは
+keyball44 定期的な運動 UoPeople vlog がいいんじゃないかと思っている．また今日はこの宣言をもってログに替える．
+今日やったこと keyball44のキーマップ検討 UoPeopleの課題 CS1013のDFにPost MATH1302のDFにPost </description>
+    </item>
+    
     <item>
       <title>UoPeopleの入学手続き</title>
       <link>https://ebisenttt.github.io/blog/posts/uopeople_application/</link>
@@ -291,21 +306,6 @@ git push origin master でローカルリポジトリをリモートリポジト
 簡単にした手順 deploy.shというファイルを作業ディレクトリ直下に作っておいて，上の4つの手順をこのファイルに予め書いておきます。ファイルの中身は下の通りです。
 今回は，hugoで生成されたhtmlファイルのみをpushしたいので，cd docsとしています。
 #!/bin/bash1 echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Build the project. hugo # if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;` # Go To Public folder cd docs # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos.</description>
-    </item>
-    
-    <item>
-      <title>またライフログを再開しようと思う</title>
-      <link>https://ebisenttt.github.io/blog/posts/20230703/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ebisenttt.github.io/blog/posts/20230703/</guid>
-      <description>ライフログを再開したい ここ最近生活が雑になっている気がする．夜はダラダラして寝るだけで朝も対して活動的ではない．ログを残して反省の材料にしたい．
-理由はこれだけではない．最近backspace.fmというpodcast番組のオフ会に参加した．以前から聞いている番組だし，メインキャストのドリキンさんのYouTubeチャンネルは毎日欠かさず見ている．
-感想としては．みんなすごくキラキラしていて活動的だった．それに印象的だったのは，オフ会の際の興味の方向がpodcastのキャストではなく，参加者と彼らが所有しているガジェットに向いているということだ．ファンミーティングではなく，まさにコミュニティのオフラインイベントだった．
-自分もこだわりをもって活動的にコンテンツを発信する側になりたいと思い，またこのブログを再開してみる．とりあえず7月中は80％の投稿率を目指してみる．
-直近のテーマは
-keyball44 定期的な運動 UoPeople vlog がいいんじゃないかと思っている．また今日はこの宣言をもってログに替える．
-今日やったこと keyball44のキーマップ検討 UoPeopleの課題 CS1013のDFにPost MATH1302のDFにPost </description>
     </item>
     
   </channel>
