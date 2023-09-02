@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ja-jp">
+  <head>
+    <title>DFSとBFSの実装方法と使い分け // ebisen blog</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.115.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ebisenttt" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://ebisenttt.github.io/blog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ebisenttt.github.io/blog/icon.png"/>
+
+<meta name="twitter:title" content="DFSとBFSの実装方法と使い分け"/>
+<meta name="twitter:description" content="目的 DFSとBFSの実装方法をまとめる queueを使った方法と再帰関数を使った方法の差をまとめる DFSとBFSの使い分け型をまとめる 結論 BFSは距離（コスト）が小さい順に探索するため，距離更新=距離確定 BFS, DFSはあくまで解法の型. いつ距離を更新するか，どのようにデータを保持するかは問題によるので応用が必要． BFSとDFS BFS 幅優先探索 スタート地点から近い（通る辺が少ない）順に探索する 特徴 「スタート地点からの通る辺が少ない順に探索する」ことにより，下記の場合に距離が更新される スタート地点からの距離が計算されていない場合 通る辺は多いけど距離が短い経路が見つかった場合 辺の長さが固定されている場合はこれが起きない．つまり「探索済み」=「最短距離確定済み」となる．よって「探索済みか」=「距離が初期値から更新されているか」で管理できる． 辺の長さが0または1のとき0-1BFSを使って解くことができる． 辺の長さが非負の場合は優先度付きqueueを用いるダイクストラ法を使って解く． DFS 深さ優先探索 スタート地点から葉に達するまで探索する．葉に到達したとき，または探索できる頂点がなくなったとき，1つ前の頂点に戻る． 特徴 再帰関数で書かれる事が多い（ベースケースに到達するまで同じ構造の関数を呼び続ける実装がしやすいから？）． 深さ優先探索でなければいけないという場合は少ない？（結果的に再帰関数を書きたい人はDFS, queueで解きたい人はBFSになっているだけ説．DPで代替されていることも多い．） 与えられるグラフのパターン 頂点iから頂点jへの辺があり，長さが与えられている
+頂点iからの辺が出ている頂点のリスト（1次元）を各頂点に対して用意する（2次元）．
+木，無向グラフ，有向グラフなど様々．
+HxWの格子状の地図が与えられ，頂点(i,j),頂点(s,t)間を移動可能な条件が与えられている．
+移動可能か，距離はいくつかについては，地図を見て判断する．
+マップ型と呼ぶことにする．
+例題 幅優先探索，マップ型，距離固定，始点・終点固定 ABC007-C問題-幅優先探索
+幅優先探索，木構造，距離固定，始点・終点固定 ABC270-C問題-Simple path
+幅優先探索，木構造，距離固定，始点・終点任意，塗り分け ABC146-D問題-Coloring Edges on Tree
+幅優先探索，マップ型，距離固定，始点・終点任意 ABC151-D問題-Maze Master
+幅優先探索，無向グラフ，距離固定，始点固定，経路復元 ABC168-D問題-..(Double Dots)
+01-BFS，マップ型，距離0-1，始点・終点固定 ABC176-D問題-Wizard in Maze
+幅・深さ優先探索，無向グラフ（一直線），始点固定 ABC209-D問題-Collision
+幅優先探索，無向グラフ，始点・終点固定，経路カウントABC211-D問題-Number of Shortest paths
+深さ・幅優先探索，マップ型，始点・終点固定 ATC001-A問題-深さ優先探索
+深さ優先探索 ABC029-C問題-Brute-force Attack
+深さ・幅優先探索，重みなし無向グラフ，始点固定 ABC054-C問題-One-stroke Path
+深さ・幅優先探索，文字列列挙 ABC114-C問題-755"/>
+
+    <meta property="og:title" content="DFSとBFSの実装方法と使い分け" />
+<meta property="og:description" content="目的 DFSとBFSの実装方法をまとめる queueを使った方法と再帰関数を使った方法の差をまとめる DFSとBFSの使い分け型をまとめる 結論 BFSは距離（コスト）が小さい順に探索するため，距離更新=距離確定 BFS, DFSはあくまで解法の型. いつ距離を更新するか，どのようにデータを保持するかは問題によるので応用が必要． BFSとDFS BFS 幅優先探索 スタート地点から近い（通る辺が少ない）順に探索する 特徴 「スタート地点からの通る辺が少ない順に探索する」ことにより，下記の場合に距離が更新される スタート地点からの距離が計算されていない場合 通る辺は多いけど距離が短い経路が見つかった場合 辺の長さが固定されている場合はこれが起きない．つまり「探索済み」=「最短距離確定済み」となる．よって「探索済みか」=「距離が初期値から更新されているか」で管理できる． 辺の長さが0または1のとき0-1BFSを使って解くことができる． 辺の長さが非負の場合は優先度付きqueueを用いるダイクストラ法を使って解く． DFS 深さ優先探索 スタート地点から葉に達するまで探索する．葉に到達したとき，または探索できる頂点がなくなったとき，1つ前の頂点に戻る． 特徴 再帰関数で書かれる事が多い（ベースケースに到達するまで同じ構造の関数を呼び続ける実装がしやすいから？）． 深さ優先探索でなければいけないという場合は少ない？（結果的に再帰関数を書きたい人はDFS, queueで解きたい人はBFSになっているだけ説．DPで代替されていることも多い．） 与えられるグラフのパターン 頂点iから頂点jへの辺があり，長さが与えられている
+頂点iからの辺が出ている頂点のリスト（1次元）を各頂点に対して用意する（2次元）．
+木，無向グラフ，有向グラフなど様々．
+HxWの格子状の地図が与えられ，頂点(i,j),頂点(s,t)間を移動可能な条件が与えられている．
+移動可能か，距離はいくつかについては，地図を見て判断する．
+マップ型と呼ぶことにする．
+例題 幅優先探索，マップ型，距離固定，始点・終点固定 ABC007-C問題-幅優先探索
+幅優先探索，木構造，距離固定，始点・終点固定 ABC270-C問題-Simple path
+幅優先探索，木構造，距離固定，始点・終点任意，塗り分け ABC146-D問題-Coloring Edges on Tree
+幅優先探索，マップ型，距離固定，始点・終点任意 ABC151-D問題-Maze Master
+幅優先探索，無向グラフ，距離固定，始点固定，経路復元 ABC168-D問題-..(Double Dots)
+01-BFS，マップ型，距離0-1，始点・終点固定 ABC176-D問題-Wizard in Maze
+幅・深さ優先探索，無向グラフ（一直線），始点固定 ABC209-D問題-Collision
+幅優先探索，無向グラフ，始点・終点固定，経路カウントABC211-D問題-Number of Shortest paths
+深さ・幅優先探索，マップ型，始点・終点固定 ATC001-A問題-深さ優先探索
+深さ優先探索 ABC029-C問題-Brute-force Attack
+深さ・幅優先探索，重みなし無向グラフ，始点固定 ABC054-C問題-One-stroke Path
+深さ・幅優先探索，文字列列挙 ABC114-C問題-755" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ebisenttt.github.io/blog/posts/dfs_bfs/" /><meta property="og:image" content="https://ebisenttt.github.io/blog/icon.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-27T10:50:44+09:00" />
+<meta property="article:modified_time" content="2023-08-27T10:50:44+09:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://ebisenttt.github.io/blog"><img class="app-header-avatar" src="/blog/icon.png" alt="ebisenttt" /></a>
+      <h1>ebisen blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/blog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/blog/about/">About</a>
+      </nav>
+      <p>プログラミング初学者の備忘録</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/ebisenttt" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">DFSとBFSの実装方法と使い分け</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 27, 2023
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="目的">目的</h2>
+<ul>
+<li>DFSとBFSの実装方法をまとめる</li>
+<li>queueを使った方法と再帰関数を使った方法の差をまとめる</li>
+<li>DFSとBFSの使い分け型をまとめる</li>
+</ul>
+<h2 id="結論">結論</h2>
+<ul>
+<li>BFSは距離（コスト）が小さい順に探索するため，距離更新=距離確定</li>
+<li>BFS, DFSはあくまで解法の型. いつ距離を更新するか，どのようにデータを保持するかは問題によるので応用が必要．</li>
+</ul>
+<h2 id="bfsとdfs">BFSとDFS</h2>
+<h3 id="bfs">BFS</h3>
+<ul>
+<li>幅優先探索</li>
+<li>スタート地点から近い（通る辺が少ない）順に探索する</li>
+</ul>
+<h4 id="特徴">特徴</h4>
+<ul>
+<li>「スタート地点からの通る辺が少ない順に探索する」ことにより，下記の場合に距離が更新される
+<ul>
+<li>スタート地点からの距離が計算されていない場合</li>
+<li>通る辺は多いけど距離が短い経路が見つかった場合
+<ul>
+<li>辺の長さが固定されている場合はこれが起きない．つまり「探索済み」=「最短距離確定済み」となる．よって「探索済みか」=「距離が初期値から更新されているか」で管理できる．</li>
+<li>辺の長さが0または1のとき0-1BFSを使って解くことができる．</li>
+<li>辺の長さが非負の場合は優先度付きqueueを用いるダイクストラ法を使って解く．</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="dfs">DFS</h3>
+<ul>
+<li>深さ優先探索</li>
+<li>スタート地点から葉に達するまで探索する．葉に到達したとき，または探索できる頂点がなくなったとき，1つ前の頂点に戻る．</li>
+</ul>
+<h4 id="特徴-1">特徴</h4>
+<ul>
+<li>再帰関数で書かれる事が多い（ベースケースに到達するまで同じ構造の関数を呼び続ける実装がしやすいから？）．</li>
+<li>深さ優先探索でなければいけないという場合は少ない？（結果的に再帰関数を書きたい人はDFS, queueで解きたい人はBFSになっているだけ説．DPで代替されていることも多い．）</li>
+</ul>
+<h2 id="与えられるグラフのパターン">与えられるグラフのパターン</h2>
+<ol>
+<li>
+<p>頂点iから頂点jへの辺があり，長さが与えられている</p>
+<p>頂点iからの辺が出ている頂点のリスト（1次元）を各頂点に対して用意する（2次元）．</p>
+<p>木，無向グラフ，有向グラフなど様々．</p>
+</li>
+<li>
+<p>HxWの格子状の地図が与えられ，頂点(i,j),頂点(s,t)間を移動可能な条件が与えられている．</p>
+<p>移動可能か，距離はいくつかについては，地図を見て判断する．</p>
+<p>マップ型と呼ぶことにする．</p>
+</li>
+</ol>
+<h3 id="例題">例題</h3>
+<ol>
+<li>
+<p>幅優先探索，マップ型，距離固定，始点・終点固定 <a href="https://atcoder.jp/contests/abc007/submissions/44995145">ABC007-C問題-幅優先探索</a></p>
+</li>
+<li>
+<p>幅優先探索，木構造，距離固定，始点・終点固定 <a href="https://atcoder.jp/contests/abc270/tasks/abc270_c">ABC270-C問題-Simple path</a></p>
+</li>
+<li>
+<p>幅優先探索，木構造，距離固定，始点・終点任意，塗り分け <a href="https://atcoder.jp/contests/abc146/tasks/abc146_d">ABC146-D問題-Coloring Edges on Tree</a></p>
+</li>
+<li>
+<p>幅優先探索，マップ型，距離固定，始点・終点任意 <a href="https://atcoder.jp/contests/abc151/tasks/abc151_d">ABC151-D問題-Maze Master</a></p>
+</li>
+<li>
+<p>幅優先探索，無向グラフ，距離固定，始点固定，経路復元 <a href="https://atcoder.jp/contests/abc168/tasks/abc168_d">ABC168-D問題-..(Double Dots)</a></p>
+</li>
+<li>
+<p>01-BFS，マップ型，距離0-1，始点・終点固定 <a href="https://atcoder.jp/contests/abc176/tasks/abc176_d">ABC176-D問題-Wizard in Maze</a></p>
+</li>
+<li>
+<p>幅・深さ優先探索，無向グラフ（一直線），始点固定 <a href="https://atcoder.jp/contests/abc209/tasks/abc209_d">ABC209-D問題-Collision</a></p>
+</li>
+<li>
+<p>幅優先探索，無向グラフ，始点・終点固定，経路カウント<a href="https://atcoder.jp/contests/abc211/tasks/abc211_d">ABC211-D問題-Number of Shortest paths</a></p>
+</li>
+<li>
+<p>深さ・幅優先探索，マップ型，始点・終点固定 <a href="https://atcoder.jp/contests/atc001/tasks/dfs_a">ATC001-A問題-深さ優先探索</a></p>
+</li>
+<li>
+<p>深さ優先探索 <a href="https://atcoder.jp/contests/abc029/tasks/abc029_c">ABC029-C問題-Brute-force Attack</a></p>
+</li>
+<li>
+<p>深さ・幅優先探索，重みなし無向グラフ，始点固定 <a href="https://atcoder.jp/contests/abc054/tasks/abc054_c">ABC054-C問題-One-stroke Path</a></p>
+</li>
+<li>
+<p>深さ・幅優先探索，文字列列挙 <a href="https://atcoder.jp/contests/abc114/tasks/abc114_c">ABC114-C問題-755</a></p>
+</li>
+<li>
+<p>深さ・幅優先探索，DP <a href="https://atcoder.jp/contests/abc233/tasks/abc233_c">ABC233-C問題-Product</a></p>
+</li>
+<li>
+<p>01-BFS，マップ型，始点・終点固定，二分探索 <a href="https://atcoder.jp/contests/abc020/tasks/abc020_c">ABC020-C問題-壁抜け</a></p>
+</li>
+<li>
+<p>幅優先探索，無向グラフ，始点・終点固定 <a href="https://atcoder.jp/contests/abc021/tasks/abc021_c">ABC021-C問題-正直者の高橋くん</a></p>
+</li>
+<li>
+<p>幅優先探索，始点・終点任意，メモ化再帰 <a href="https://atcoder.jp/contests/abc037/tasks/abc037_d">ABC037-D問題-経路</a></p>
+<p>幅優先探索ではあるが，どこを始点とするか，どの順序で探索するかについて考察する難易度がある程度高く，実装方法も他の問題とは異なる</p>
+</li>
+<li>
+<p>深さ・幅優先探索，始点・終点任意 <a href="https://atcoder.jp/contests/abc049/tasks/arc065_b">ABC049-D問題-連結</a></p>
+<p>深さ優先探索でも解けるが，UnionFindのほうが単純？連結部分を求めたあとの実装方法のほうが発想が必要だった．</p>
+</li>
+<li>
+<p>深さ・幅優先探索，始点固定，木構造 <a href="https://atcoder.jp/contests/abc070/tasks/abc070_d">ABC070-D問題-Transit Tree Path</a></p>
+<p>木構造なので距離の更新が起きない．よってダイクストラ法でなく深さ，幅優先探索でもOK．</p>
+</li>
+<li>
+<p>幅・深さ優先探索，始点固定（でよい），木構造 <a href="https://atcoder.jp/contests/abc126/tasks/abc126_d">ABC126-D問題-Even Relation</a></p>
+</li>
+<li>
+<p>幅・深さ優先探索，始点固定（でよい），木構造 <a href="https://atcoder.jp/contests/abc138/tasks/abc138_d">ABC138-D問題-Ki</a></p>
+</li>
+<li>
+<p>幅・深さ優先探索，始点・終点固定 <a href="https://atcoder.jp/contests/abc184/tasks/abc184_e">ABC184-E問題-Third Avenue</a></p>
+</li>
+<li>
+<p>幅・深さ優先探索，マップ型，始点・終点固定 <a href="https://atcoder.jp/contests/past202005-open/tasks/past202005_g">第三回PAST過去問-G問題-グリッド金移動</a></p>
+</li>
+</ol>
+<p>以下の問題は参考サイトでは幅・深さ優先探索に分類されていたが，解説では他の解法だったもの</p>
+<ol>
+<li>ダイクストラ法，往復経路 <a href="https://atcoder.jp/contests/abc035/tasks/abc035_d">ABC035-D問題-トレジャーハント</a></li>
+<li>DP <a href="https://atcoder.jp/contests/abc185/tasks/abc185_e">ABC185-E問題</a></li>
+</ol>
+<h2 id="参考">参考</h2>
+<p><a href="https://zenn.dev/koyanagihitoshi/books/atcoder-classification-4">AtCoderの問題を分類しました【計算量・データ構造・アルゴリズム】</a></p>
+<p><a href="https://qiita.com/c-yan/items/56a051d826b873b4f78d">AtCoder 問題カテゴリー分類</a></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
